@@ -1,0 +1,74 @@
+---
+import { ViewTransitions } from "astro:transitions";
+export const prerender = true;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/images/favicon/GlobalIcon.webp" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Global Automation - Soluciones Integrales En Automatizacion</title>
+		<script src="https://kit.fontawesome.com/aa233720b7.js" crossorigin="anonymous"></script>
+
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+		
+		<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;500;600&family=Montserrat:wght@100;300;500;600;700&family=Spline+Sans+Mono:wght@700&family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		<ViewTransitions />
+	</head>
+	<body>
+		<div class="wrapper">
+			<slot />
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	</body>
+</html>
+<style is:global>
+	.wrapper{
+		width: 100%;
+		background: #fff;
+		overflow-x: hidden;
+	}
+	body{
+		margin: 0;
+		height: 1000px;
+	}
+	.breadcrumb-area {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 190px 0 170px;
+  position: relative;
+}
+
+.breadcrumb-area:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.62);
+    z-index: 0;
+}
+
+.breadcrumb-area h1 {
+    color: #ffffff;
+    position: relative;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+</style>

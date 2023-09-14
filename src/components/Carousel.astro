@@ -1,0 +1,242 @@
+---
+
+---
+
+<section class="latest-project sec-padd breadcrumb-area" style="background-image: url(images/slides/LineaAire.jpg);">
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="section-title2">
+                    <h2>Ultimos Proyectos</h2>
+                </div> 
+            </div>
+        </div>
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/Blog/Blog1/ajapp.jpg" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay ">
+                                    <div class="content project-content text-center">
+                                        <a class="text-decoration-none" href="project-single.html"><h4>PETROLEUM GAS</h4></a>
+                                        <p>Inyectora PDI</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/Blog/Blog1/ajapp.jpg" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">
+                                    <div class="content project-content">
+                                        <a class="text-decoration-none" href="project-single.html"><h4>PETROLEUM GAS</h4></a>
+                                        <p>Lubricación CerroMatoso</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/Blog/Blog1/ajapp.jpg" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">
+                                    <div class="content project-content">
+                                        <a class="text-decoration-none" href="project-single.html"><h4>PETROLEUM GAS</h4></a>
+                                        <p>Lubricación Doble Línea para Siderurgia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/Blog/Blog1/ajapp.jpg" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">
+                                    <div class="content project-content">
+                                        <a class="text-decoration-none" href="project-single.html"><h4>PETROLEUM GAS</h4></a>
+                                        <p>Chemical</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/Blog/Blog1/ajapp.jpg" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">
+                                    <div class="content project-content">
+                                        <a class="text-decoration-none" href="project-single.html"><h4>PETROLEUM GAS</h4></a>
+                                        <p>Chemical</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/Blog/Blog1/ajapp.jpg" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">
+                                        <div class="content project-content">
+                                            <a class="text-decoration-none" href="project-single.html"><h4>PETROLEUM GAS</h4></a>
+                                            <p>Chemical</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<script is:inline>
+let items = document.querySelectorAll('#recipeCarousel .carousel-item')
+
+items.forEach((el) => {
+    const minPerSlide = 4
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+        if (!next) {
+            // wrap carousel by using first child
+        	next = items[0]
+      	}
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+})
+</script>
+<style>
+    @media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+
+
+.project-content {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostrar el contenido al hacer hover sobre la imagen */
+.card:hover .project-content {
+    opacity: 1;
+}
+.card:hover{
+    border: 4px solid #ad2727;
+    background: rgba(0, 0, 0, 0.62);
+}
+.card:hover .card-img{
+    background: rgba(0, 0, 0, 0.62);
+}
+.card-img-overlay h4{
+    color: #fff;
+}
+.card-img-overlay{
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease-in-out;
+}
+.card-img-overlay:hover{
+    background: rgba(0, 0, 0, 0.62);
+}
+.section-title2 {
+  position: relative;
+  margin-bottom: 50px;
+}
+.section-title2 h2{
+    color: #fff;
+}
+
+.section-title2:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 70px;
+    height: 1px;
+    background: #ad2727;
+}
+.section-title.center:after {
+    left: 50%;
+    margin-left: -35px;
+}
+.latest-project {background-size: cover;background-repeat: no-repeat;background-attachment: fixed;}
+
+
+
+.breadcrumb-area {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 190px 0 170px;
+  position: relative;
+}
+
+.breadcrumb-area:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.62);
+    z-index: 0;
+}
+
+</style>
