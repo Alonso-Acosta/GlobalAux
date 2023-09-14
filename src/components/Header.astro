@@ -87,11 +87,18 @@
                                         <a href="/">Inicio</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#">Productos</a>
+                                        <a  href="#">Productos</a>
                                         <ul class="drop-menu">
                                             <li class="drop-menu-item"><a href="LubricacionIndustrial">Lubricacion Industrial</a>
+                                                <ul class="drop-submenu">
+                                                    <li><a class="drop-menu-item" href="LubricacionIndustrial">Lubricacion Centralizada</a></li>
+                                                    <li><a class="drop-menu-item" href="LubricadoresMonopunto">Lubricadores Monopunto</a></li>
+                                                    <li><a class="drop-menu-item" href="LubricacionIndustrial">Visores e Indicadores de Nivel</a></li>
+                                                    <li><a class="drop-menu-item" href="LubricacionIndustrial">Respiradores Desecantes</a></li>
+                                                    <li><a class="drop-menu-item" href="LubricacionIndustrial">Válvulas de Muestreo</a></li>
+                                                </ul>
                                             </li>
-                                            <li class="drop-menu-item"><a href="/">Neumatica</a></li>
+                                            <li class="drop-menu-item"><a  href="/">Neumatica</a></li>
                                             <li class="drop-menu-item"><a href="/">Válvulas Industriales</a></li>
                                             <li class="drop-menu-item"><a href="/">Vacío</a></li>
                                             <li class="drop-menu-item"><a href="/">Ahorro De Energía en
@@ -158,7 +165,15 @@
                                             Productos
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="LubricacionIndustrial">Lubricacion Industrial</a>
+                                            <li class="dropdown2"><a class="nav-link text-uppercase text-light" role="button"
+                                                data-bs-toggle="dropdown2" aria-expanded="false">Lubricacion Industrial</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="LubricacionIndustrial">Lubricacion Centralizada</a></li>
+                                                <li><a class="dropdown-item" href="LubricadoresMonopunto">Lubricadores Monopunto</a></li>
+                                                <li><a class="dropdown-item" href="LubricacionIndustrial">Visores e Indicadores de Nivel</a></li>
+                                                <li><a class="dropdown-item" href="LubricacionIndustrial">Respiradores Desecantes</a></li>
+                                                <li><a class="dropdown-item" href="LubricacionIndustrial">Válvulas de Muestreo</a></li>
+                                            </ul>
                                             </li>
                                             <li><a class="dropdown-item" href="/">Neumatica</a></li>
                                             <li><a class="dropdown-item" href="/">Válvulas Industriales</a></li>
@@ -469,7 +484,8 @@
     }
 
     .menu,
-    .drop-menu {
+    .drop-menu,
+    .drop-menu2 {
         list-style-type: none;
         padding: 0;
         margin: 0;
@@ -477,7 +493,6 @@
 
     .menu-item {
         display: inline-block;
-
         position: relative;
     }
 
@@ -489,6 +504,24 @@
         display: block;
 
     }
+    .menu-item2 {
+        display: inline-block;
+        position: relative;
+    }
+
+    .menu-item2 a {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 6px 10px;
+        color: #fff;
+        display: block;
+
+    }
+
+
+    .drop-menu li{
+        position: relative;
+    }
 
     .drop-menu {
         display: none;
@@ -496,33 +529,55 @@
         background-color: #292929;
         min-width: 250px;
         border-top: solid 2px #fff;
+        margin-top: 0px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    }
+    .drop-submenu {
+        display: none;
+        position: absolute;
+        background-color: #292929;
+        left: auto;
+        right: -100%;
+        top: 7px;
+        padding-left: 0;
+        min-width: 250px;
+        border-top: solid 2px #fff;
         margin-top: 2px;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
     }
 
-    .drop-menu-item {
+    .drop-menu-item,
+    .drop-menu-item2 {
         width: 100%;
 
     }
 
-    .drop-menu-item a:hover {
+    .drop-menu-item a:hover,
+    .drop-menu-item2 a:hover {
         background-color: #ad2727;
 
     }
 
-    .drop-menu-item:hover {
+    .drop-menu-item:hover,
+    .drop-menu-item2:hover {
         background-color: #292929;
     }
 
-    .drop-menu-item a {
+    .drop-menu-item a,
+    .drop-menu-item2 a {
         color: #fff;
         font-size: 0.8rem;
     }
 
+    .drop-menu-item:hover .drop-submenu{
+        display: block;
+    }
+    
     .menu-item:hover .drop-menu {
         display: block;
     }
 
+    
     /*medias */
 
 
