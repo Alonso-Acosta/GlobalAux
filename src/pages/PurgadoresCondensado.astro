@@ -154,22 +154,23 @@ import Footer from '../components/Footer.astro';
                             <img class="text-center" src="images/Productos/Drenajes/assemble-1.webp" alt="">
                         </div>
                         <div class="col-lg-9 col-md-6 col-sm-12">
-                            <p>Un mantenimiento a un purgador de condensado de la gama KAPTIV, se puede realizar de una forma sencilla, según la referencia. <br>
+                            <p class="mt-5 lh-base">Un mantenimiento a un purgador de condensado de la gama KAPTIV, se puede realizar de una forma sencilla, según la referencia. <br>
     
                                 El KAPTIV - CS, posee tres (3) componente que se pueden desmontar muy fácil. Para acceder a la válvula de acción directa se requiere de desmontar la parte superior. Un kit de mantenimiento esta disponible a un precio muy competitivo.</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-12">
-                            <img class="text-center" src="images/Productos/Drenajes/md-assembly.webp" alt="">
-                        </div>
-                        <div class="col-lg-9 col-md-6 col-sm-12">
+                        
+                        <div class="col-lg-12 col-md-6 col-sm-12">
                             <p>El purgador de condensado KAPTIV - MD, se puede desmontar destornillando dos tornillos, después soltar la bobina para acceder a las partes interna de la válvula.  Las partes interna de la válvula JORC, se fabrican de acero inoxidable, esto ofrece una larga vida y alta resistencia al condensado agresivo. <br>
                                 Como todas las purgas la parte conectada al componente se queda montada durante el mantenimiento, la ventaja de la MAGY-UL, es que no tiene que reconectarse la válvula, lo que ahorra tiempo. El kit de mantenimiento del purgador de condensado MAGY-UL, es fácil para instalar  y la llave para desmontar hace parte de ese kit.
                             </p>
                         </div>
                     </div>
                     <div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-12">
+                            <img class="text-center" src="images/Productos/Drenajes/md-assembly.webp" alt="">
+                        </div>
                         <div class="col-lg-3 col-md-4 col-sm-12">
                             <img class="text-center" src="images/Productos/Drenajes/valve-1.webp" alt="">
                         </div>
@@ -509,10 +510,20 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.default-blog-news {
+		max-width: 300px;
+		height: 400px;
 		position: relative;
 		transition: .5s ease-in-out;
 		margin-bottom: 50px;
+		border: solid 1px #ad2727 ;
 	}
+	.default-blog-news figure{
+		height: 70%;
+	}
+	.default-blog-news img{
+		max-height: 100%;
+	}
+
 
 	.default-blog-news:hover {
 		box-shadow: 0 15px 16px 0 rgba(0, 0, 0, 0.03), 0 0px 82px 0 rgba(0, 0, 0, 0.02);

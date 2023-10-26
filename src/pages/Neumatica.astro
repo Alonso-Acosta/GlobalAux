@@ -529,10 +529,21 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.default-blog-news {
+		max-width: 300px;
+		height: 400px;
 		position: relative;
 		transition: .5s ease-in-out;
 		margin-bottom: 50px;
+		border: solid 1px #ad2727 ;
 	}
+	.default-blog-news figure{
+		height: 70%;
+	}
+	.default-blog-news img{
+		max-height: 100%;
+	}
+
+
 
 	.default-blog-news:hover {
 		box-shadow: 0 15px 16px 0 rgba(0, 0, 0, 0.03), 0 0px 82px 0 rgba(0, 0, 0, 0.02);
@@ -797,6 +808,17 @@ import Footer from '../components/Footer.astro';
   transform: scale(1, 1);    
 }
 
+.text{
+	font-family: 'Hind', sans-serif;
+    font-size: 1.3rem;
+    color: #848484;
+    line-height: 26px;
+    font-weight: 300;
+}
+h2, h4,h3{
+	color: #ad2727;
+	margin-top: 1rem;
 
+}
 
 </style>
