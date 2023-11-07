@@ -24,16 +24,6 @@ import Footer from '../components/Footer.astro';
 						<div class="text-holder">
 							<div class="text ">
 								<h2>Optimización: Caudalímetro para Aire EXAIR / Detector de Fugas EXAIR</h2>
-								<div class="row">
-									<div class="col-lg-6 col-md-4 col-sm-12">
-                                        <h4>Video Caudalímetro Para Aire EXAIR</h4>
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/DHZ-93aa8do?si=bZz6lbwpTHIlKSmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									</div>
-									<div class="col-lg-6 col-md-8 col-sm-12">
-                                        <h4>Video Detector de Fugas EXAIR</h4>
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/LJRnD9RfOW8?si=yqbs_hy1BEtQCKee" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -46,44 +36,48 @@ import Footer from '../components/Footer.astro';
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<div class="default-blog-news wow fadeInUp animated animated"
-						style="visibility: visible; animation-name: fadeInUp;">
-						<figure class="img-holder">
-							<a href="/caudalimetro"><img src="images/Productos/Caudalimetro/caudalimetro-eletronico-exair.webp" alt="News"></a>
-							<figcaption class="overlay">
-								<div class="box">
-									<div class="content">
-										<a href="/caudalimetro"><i class="fa fa-link" aria-hidden="true"></i></a>
+					<button type="button" class="btn btn-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalCaudalimetro">
+						<div class="default-blog-news wow fadeInUp animated animated"
+							style="visibility: visible; animation-name: fadeInUp;">
+							<figure class="img-holder">
+								<img class="w-100" src="images/Productos/Caudalimetro/caudalimetro-eletronico-exair.webp" alt="">
+								<figcaption class="overlay">
+									<div class="box">
+										<div class="content">
+											<i class="fa fa-link" aria-hidden="true"></i>
+										</div>
 									</div>
-								</div>
-							</figcaption>
-						</figure>
-						<div class="lower-content">
-							<a class="text-decoration-none" href="/caudalimetro">
-								<h4>Caudalimetro de aire</h4>
-							</a>
+								</figcaption>
+							</figure>
+							<div class="lower-content">		
+								<a class="text-decoration-none">
+									<h4>Caudalimetro de aire</h4>
+								</a>	
+							</div>
 						</div>
-					</div>
+					</button>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<div class="default-blog-news wow fadeInUp animated animated"
-						style="visibility: visible; animation-name: fadeInUp;">
-						<figure class="img-holder">
-							<a href="/DetectorDeFugas"><img src="images/Productos/Caudalimetro/detector-de-fugas.webp" alt="News"></a>
-							<figcaption class="overlay">
-								<div class="box">
-									<div class="content">
-										<a href="/DetectorDeFugas"><i class="fa fa-link" aria-hidden="true"></i></a>
+					<button type="button" class="btn btn-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalDectector">
+						<div class="default-blog-news wow fadeInUp animated animated"
+							style="visibility: visible; animation-name: fadeInUp;">
+							<figure class="img-holder">
+								<img class="w-100" src="images/Productos/Caudalimetro/detector-de-fugas.webp" alt="">
+								<figcaption class="overlay">
+									<div class="box">
+										<div class="content">
+											<i class="fa fa-link" aria-hidden="true"></i>
+										</div>
 									</div>
-								</div>
-							</figcaption>
-						</figure>
-						<div class="lower-content">
-							<a class="text-decoration-none" href="/DetectorDeFugas">
-								<h4>Detector de fugas</h4>
-							</a>
+								</figcaption>
+							</figure>
+							<div class="lower-content">		
+								<a class="text-decoration-none">
+									<h4>Detector de fugas</h4>
+								</a>	
+							</div>
 						</div>
-					</div>
+					</button>
 				</div>
 				
 			</div>
@@ -139,8 +133,195 @@ import Footer from '../components/Footer.astro';
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="ModalCaudalimetro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Caudalímetro</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+			<div class="text ">
+				<div class="row">
+					<h2>Caudalímetro para Aire Electrónico</h2>
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<img class="text-center"
+							src="images/Productos/Caudalimetro/caudalimetro-eletronico-exair.webp"
+							alt="">
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12">
+						<p>El caudalímetro para aire electrónico EXAIR es muy fácil de usar y está
+							diseñado para minimizar el consumo de aire comprimido durante las
+							operaciones de soplado, secado, enfriamiento, transporte y eliminación de
+							estática. Combina un sensor fotoeléctrico con control de tiempo que limita
+							el consumo de aire comprimido, apagándolo cuando no detecta la presencia de
+							ningún elemento.
+							<br>
+
+							El control de tiempo se ajusta fácilmente a las necesidades de la operación
+							y provee flexibilidad en la distancia sensorial.
+							<br>
+							Para la mayoría de las empresas el compresor de aire consume más
+							electricidad que cualquier otro equipo. El caudalímetro para aire ha sido
+							diseñado para mejorar la eficiencia minimizando el consumo de aire
+							comprimido y reduciendo así su costo. Solo enciende el aire cuando detecta
+							la presencia de un elemento y provee solo la cantidad necesaria de aire para
+							realizar una tarea u operación.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<ul id="list">
+							<h4>Aplicaciones</h4>
+							<li>Soplado de carrocerías.</li>
+							<li>Limpieza de paquetes.</li>
+							<li>Secado de piezas.</li>
+							<li>Remoción de polvo.</li>
+							<li>Remoción de desechos metálicos.</li>
+							<li>Operaciones de llenado.</li>
+							<li>Limpieza de contaminantes.</li>
+							<li>Enfriamiento.</li>
+							<li>Neutralización de estática.</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<ul id="list">
+							<h4>Ventajas</h4>
+							<li>De fácil conexión eléctrica 100-240 VAC, 50/60 Hz.</li>
+							<li>Nema 4/IP66.</li>
+							<li>Sensor compacto ideal para espacios estrechos.</li>
+							<li>Temporizador analógico de ocho funciones para control de
+								encendido/apagado, pulsación y retrasos.</li>
+							<li>Temporizador configurable de 0.10 segundos a 120 horas.</li>
+							<li>Sensor resistente al agua y polvo, con lecturas exactas.</li>
+							<li>Sensor con inmunidad superior al ruido y a las cargas inductivas.</li>
+							<li>Detección de larga distancia, hasta 1 metro.</li>
+						</ul>
+					</div>
+				</div>
 
 
+
+				<div class="row">
+					<h2>Caudalímetro para Aire Digital EXAIR</h2>
+					<div class="col-lg-3 col-md-4 col-sm-12">
+						<img class="text-center"
+							src="images/Productos/Caudalimetro/caudalimetro-digital.webp" alt="">
+					</div>
+					<div class="col-lg-9 col-md-8 col-sm-12">
+						<p>¡El caudalímetro para aire digital EXAIR le permite monitorear fácilmente el
+							consumo y el desperdicio del aire comprimido! La pantalla digital muestra la
+							cantidad exacta de aire comprimido que se usa en el cauce descendiente y al
+							ayudar a identificar las costosas fugas o los productos de aire
+							ineficientes, es posible ahorrar cientos de dólares al año en desperdicio de
+							aire comprimido. <br>
+							Muchas compañías instalan el caudalímetro para aire digital en cada soporte
+							principal de su sistema de distribución de aire para monitorearlo
+							constantemente y disminuir el uso del aire comprimido. 
+						</p>
+					</div>
+				</div>
+				<p>El caudalímetro para aire digital tiene una pantalla LED que indica
+					directamente la velocidad del flujo de aire (SCFM o m3/hr) en la tubería a
+					la que está conectado. Otros medidores de flujo de aire comprimido requieren
+					que se multiplique la lectura por un factor de conversión específico para
+					ser exactos. Cada medidor de flujo digital está calibrado para un tamaño de
+					tubería específico a la cual está montado. Un suministro de 18 VCC se
+					incluye con una entrada de 100-240 VCA y adaptadores para tomas de corriente
+					en todo el mundo. <br>
+
+					El caudalímetro para aire digital está diseñado para estar montado
+					permanentemente a la tubería. Requiere que el usuario haga dos agujeros a
+					través de la tubería usando la broca y la guía que se incluyen. No se
+					requiere de cortado, soldado, ajustes ni calibración.</p>
+				<h4>Video Caudalímetro Para Aire EXAIR</h4>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/DHZ-93aa8do?si=bZz6lbwpTHIlKSmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalDectector" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Detector de Fugas</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+			<div class="text ">
+				<h2>Detector de Fugas</h2>
+
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<img class="text-center"
+							src="images/Productos/Caudalimetro/detector-de-fugas.webp"
+							alt="">
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12">
+						<p>Las plantas mal mantenidas pueden perder fácilmente hasta el 30% de la producción del compresor por las fugas no detectadas. El detector de fugas ultrasónico es un instrumento de mano de alta calidad que puede localizar esas costosas fugas con solo apuntar al aparato hacia el lugar donde se sospecha que hay fuga. <br>
+
+							Cuando se detecta una fuga, el aparato emite una señal sonora que se escucha por los auriculares que vienen incluidos y el visor LED se ilumina. <br>
+							
+							Se pueden testear rápida y efectivamente las uniones, tuberías, válvulas y accesorios de toda una instalación a distancia de hasta 6.1 metros. <br>
+							
+							En algunos casos la fuga sospechada se encuentra en un área caliente y/o cercana a partes móviles. La extensión tubular y la parábola permiten probar estos lugares difíciles desde lejos para detectar perdidas
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<ul id="list">
+							<h4>Aplicaciones</h4>
+							<li>Detecta fugas en sistemas de aire, vapor, gas no inflamable, incluyendo tuberías, uniones, conexiones, válvulas, cilindros y tanques de presión.</li>
+							<li>Detecta la fuente de desgaste de cojinetes o rodamientos.</li>
+							<li>Detecta arcos eléctricos.</li>
+							<li>Detecta fugas en sistemas de refrigeración y aire acondicionado.</li>
+							<li>Detecta fugas en sistema de frenos, tuberías, neumáticos y radiadores.</li>
+							<li>Detecta grietas en correas en V de caucho en movimiento.</li>
+							<li>Detecta fugas de vacío.</li>
+							<li>Controla el estado de los sellos de los motores.</li>
+
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<ul id="list">
+							<h4>Ventajas</h4>
+							<li>Detecta cualquier fuga hasta 6.1 metros de distancia.</li>
+							<li>Convierte el ultrasonido en una frecuencia audible.</li>
+							<li>Visor led confirma la ubicación de la fuga.</li>
+							<li>Detecta fugas en ambientes industriales ruidosos.</li>
+							<li>Los controles de sensibilidad proporcionan una detección precisa.</li>
+							<li>No lo afectan contaminantes ni el viento.</li>
+							<li>Incluye accesorios para detectar fugas en áreas difíciles.</li>
+							<li>Cumple con las normas ASTM.</li>
+						</ul>
+					</div>
+				</div>
+				<h4>Video Detector de Fugas EXAIR</h4>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/LJRnD9RfOW8?si=yqbs_hy1BEtQCKee" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									
+			</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 	<Footer />
