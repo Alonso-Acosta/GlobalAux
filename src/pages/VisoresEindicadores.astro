@@ -75,7 +75,7 @@ import Footer from '../components/Footer.astro';
 						<div class="default-blog-news wow fadeInUp animated animated"
 							style="visibility: visible; animation-name: fadeInUp;">
 							<figure class="img-holder">
-								<img src="images/Productos/MonitoreoDeCondicion/bowl.webp" alt="News">
+								<img class="imgDrenaje" src="images/Productos/MonitoreoDeCondicion/bowl.webp" alt="News">
 								<figcaption class="overlay">
 									<div class="box">
 										<div class="content">
@@ -237,7 +237,7 @@ import Footer from '../components/Footer.astro';
 				
 				<div class="row">
 					<div class="col-lg-4 col-md-12">
-						<img src="images/Productos/MonitoreoDeCondicion/hub1.webp"
+						<img class="w-80" src="images/Productos/MonitoreoDeCondicion/hub1.webp"
 							alt="">
 					</div>
 					<div class="col-lg-8 col-md-12">
@@ -297,7 +297,7 @@ import Footer from '../components/Footer.astro';
 				</div>
 				<div class="row">
 					<div class="col-lg-9 col-md-12">
-						<p>El nuevo visor de nivel 3D tiene toda la claridad y durabilidad que necesitas, sin ninguna fuga, o grietas, ya que su vidrio de visión es ultra fino y super claro sin distorsión ni decoloración.
+						<p class="mt-4">El nuevo visor de nivel 3D tiene toda la claridad y durabilidad que necesitas, sin ninguna fuga, o grietas, ya que su vidrio de visión es ultra fino y super claro sin distorsión ni decoloración.
 							<br>
 							La superficie frontal plana permite el uso de luz o láseres para verificar si hay partículas – sin deflexión de la luz
 							<br>
@@ -309,7 +309,7 @@ import Footer from '../components/Footer.astro';
 						</p>
 					</div>
 					<div class="col-lg-3 col-md-12">
-						<img src="images/Productos/MonitoreoDeCondicion/visores-e-indicadores-de-nivel1.webp"
+						<img class="mt-4" src="images/Productos/MonitoreoDeCondicion/visores-e-indicadores-de-nivel1.webp"
 							alt="">
 					</div>
 				</div>
@@ -344,7 +344,7 @@ import Footer from '../components/Footer.astro';
 						</ul>
 					</div>
 					<div class="col-lg-3 col-md-12">
-						<img src="images/Productos/MonitoreoDeCondicion/visor-de-columna1.webp"
+						<img class="mt-5" src="images/Productos/MonitoreoDeCondicion/visor-de-columna1.webp"
 							alt="">
 					</div>
 				</div>
@@ -430,6 +430,11 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
+
+	.imgDrenaje{
+		object-fit=cover;
+	}
+
 	.text img {
 		text-align: center;
 		width: 100%;
