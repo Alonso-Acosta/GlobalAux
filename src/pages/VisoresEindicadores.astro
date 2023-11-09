@@ -114,67 +114,6 @@ import Footer from '../components/Footer.astro';
 						</div>
 					</button>
 				</div>
-
-				<!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-					<div class="default-blog-news wow fadeInUp animated animated"
-						style="visibility: visible; animation-name: fadeInUp;">
-						<figure class="img-holder">
-							<a href="/VisorDeNivel"><img src="images/Productos/MonitoreoDeCondicion/visores-e-indicadores-de-nivel1.webp" alt="News"></a>
-							<figcaption class="overlay">
-								<div class="box">
-									<div class="content">
-										<a href="/VisorDeNivel"><i class="fa fa-link" aria-hidden="true"></i></a>
-									</div>
-								</div>
-							</figcaption>
-						</figure>
-						<div class="lower-content">
-							<a class="text-decoration-none" href="/VisorDeNivel">
-								<h4>Visor de Nivel</h4>
-							</a>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-					<div class="default-blog-news wow fadeInUp animated animated"
-						style="visibility: visible; animation-name: fadeInUp;">
-						<figure class="img-holder">
-							<a href="/PuertoDeDrenaje"><img src="images/Productos/MonitoreoDeCondicion/bowl.webp" alt="News"></a>
-							<figcaption class="overlay">
-								<div class="box">
-									<div class="content">
-										<a href="/PuertoDeDrenaje"><i class="fa fa-link" aria-hidden="true"></i></a>
-									</div>
-								</div>
-							</figcaption>
-						</figure>
-						<div class="lower-content">
-							<a class="text-decoration-none" href="/PuertoDeDrenaje">
-								<h4>Puerto de drenaje</h4>
-							</a>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-					<div class="default-blog-news wow fadeInUp animated animated"
-						style="visibility: visible; animation-name: fadeInUp;">
-						<figure class="img-holder">
-							<a href="/IndicadoresAccesorios"><img src="images/Productos/MonitoreoDeCondicion/BombaMuestreo.jpg" alt="News"></a>
-							<figcaption class="overlay">
-								<div class="box">
-									<div class="content">
-										<a href="/IndicadoresAccesorios"><i class="fa fa-link" aria-hidden="true"></i></a>
-									</div>
-								</div>
-							</figcaption>
-						</figure>
-						<div class="lower-content">
-							<a class="text-decoration-none" href="/IndicadoresAccesorios">
-								<h4>Accesorios</h4>
-							</a>
-						</div>
-					</div>
-				</div> -->
 				
 			</div>
 		</div>
@@ -215,7 +154,7 @@ import Footer from '../components/Footer.astro';
 				</p>
 				<div class="row">
 					<div class="col-lg-4 col-md-12">
-						<img class="mt-5" src="images/Productos/MonitoreoDeCondicion/visor-3d-con-indicador-magnetico.webp"
+						<img class="mt-5 imgMedio" src="images/Productos/MonitoreoDeCondicion/visor-3d-con-indicador-magnetico.webp"
 							alt="">
 					</div>
 					<div class="col-lg-8 col-md-12">
@@ -237,7 +176,7 @@ import Footer from '../components/Footer.astro';
 				
 				<div class="row">
 					<div class="col-lg-4 col-md-12">
-						<img class="w-80" src="images/Productos/MonitoreoDeCondicion/hub1.webp"
+						<img class="imgMedio" src="images/Productos/MonitoreoDeCondicion/hub1.webp"
 							alt="">
 					</div>
 					<div class="col-lg-8 col-md-12">
@@ -327,7 +266,7 @@ import Footer from '../components/Footer.astro';
 						</p>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row align-items-center">
 					<div class="col-lg-9 col-md-12">
 						<ul id="list">
 							<h4>Condiciones de operación:</h4>
@@ -344,7 +283,7 @@ import Footer from '../components/Footer.astro';
 						</ul>
 					</div>
 					<div class="col-lg-3 col-md-12">
-						<img class="mt-5" src="images/Productos/MonitoreoDeCondicion/visor-de-columna1.webp"
+						<img class="" src="images/Productos/MonitoreoDeCondicion/visor-de-columna1.webp"
 							alt="">
 					</div>
 				</div>
@@ -430,9 +369,13 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-
+	.imgMedio{
+		width: 90% !important;
+		margin-left: 10%;
+	}
+	
 	.imgDrenaje{
-		object-fit=cover;
+		object-fit: contain;
 	}
 
 	.text img {
