@@ -1,0 +1,10 @@
+.textColor p, label{
+    color: #848484 !important;
+}
+.textColor input, h4{
+    color: #ad2727 !important;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #ad2727 ; 
+    color: white;
+  }

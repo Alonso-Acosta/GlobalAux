@@ -2,22 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import CalculadoraLubri from '../components/CalculadoraLubri.jsx';
+import CalculadoraLubriReAceite from '../components/CalculadoraLubriReAceite.jsx';
 ---
 
 <Layout>
     <Header />
-
-
     <section class="breadcrumb-area"
         style="background-image: url(images/Productos/LubricacionIndustrial/lubricacion-automatica-portada.webp);">
         <div class="container text-center">
-            <h1>Sistemas de Lubricación de Grasa
-                Manual y Automático a Perdida</h1>
+            <h1>Sistemas de Lubricación por Recirculación de Aceite</h1>
         </div>
     </section>
     <!--End breadcrumb area-->
-
     <section id="blog-area" class="blog-with-sidebar-area blog-single-area">
         <div class="container">
             <div class="row">
@@ -26,16 +22,16 @@ import CalculadoraLubri from '../components/CalculadoraLubri.jsx';
                         <div class="text-holder">
                             <div class="text ">
                                 <h3>Cálculos según Aplicación</h3>
-                                <p>Los sistemas de lubricación con grasa, consiste en aplicar de forma manual o automática capaz de lubricante en grasa, en áreas donde se presente rozamiento en seco de partes móviles de la maquinaria, este tipo de lubricante se diferencia del aceite, porque la consistencia del lubricante es mayor.
+                                <p>Este sistema de lubricación genere una circulación constante de aceite por un punto determinado de lubricación, el sistema asegura un flujo de aceite continuo en punto con rozamiento que necesite ser lubricado, la recirculación se genera llevando este aceite a un tanque el cual debe estar dotado con un sistema de bombeo que permita el paso del aceite por el mismo punto con rozamiento. Cabe resaltar que se debe mantener condiciones de temperaturas optimas durante todo el proceso.
                                     En esta sección usted podrá realizar el  cálculo de insumos de lubricante según  el sistema automático de lubricación de sistema  para los siguientes mecanismos:</p>
                                 <h4>Instrucciones</h4>
                                 <ul id="list">
                                     <li>Realizar el cálculo del factor de servicio, el cual se calculará según las condiciones de servicio.</li>
-                                    <li>Seleccionar el tipo de elemento mecánico al cual se le aplicara el sistema de lubricación de grasa manual o automático a perdida.</li>
+                                    <li>Seleccionar el tipo de elemento mecánico al cual se le aplicara el sistema de lubricación por recirculación de aceite.</li>
                                     <li>Ingresar los parámetros solicitados para realizar el cálculo volumen de lubricante requerido.</li>
                                     <li>Visualizar  la cantidad de insumo de lubricación necesario para la aplicación</li>
                                 </ul>
-                                <CalculadoraLubri client:only/>
+                                <CalculadoraLubriReAceite client:only/>
                             </div>
                         </div>
                     </div>
