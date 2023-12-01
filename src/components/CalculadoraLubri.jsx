@@ -25,6 +25,15 @@ function CalculadoraLubri() {
   };
 
   ////RODAMIENDO DE BOLA 
+
+  const [selectedOption, setSelectedOption] = useState('mm');
+
+  const handleRadioChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+
+
   const [sistemasAutomaticos1h, setSistemasAutomaticos1h] = useState(0);
   const [sistemasAutomaticos8h, setSistemasAutomaticos8h] = useState(0);
   const [sistemasAutomaticos1hin, setSistemasAutomaticos1hin] = useState(0);
@@ -53,10 +62,14 @@ function CalculadoraLubri() {
 
   // Función para realizar los cálculos
   const calcularResultados = () => {
-    const eje_mm = parseFloat(formData.eje_mm);
+    var eje_mm =0
+    if(selectedOption ==='in'){
+        eje_mm = parseFloat(formData.eje_mm)*25.4;
+    }else{
+        eje_mm = parseFloat(formData.eje_mm);
+    }
     const filas = parseInt(formData.filas);
     const fs = parseFloat(formData.fs);
-
     const sistemasAutomaticos1h = ((eje_mm * eje_mm) * fs * 0.002 * 25.4 * filas / 8000);
     const sistemasAutomaticos8h = ((eje_mm * eje_mm) * fs * 0.002 * 25.4 * filas / 1000);
     const sistemasAutomaticos1hin = sistemasAutomaticos1h/16.387;
@@ -103,11 +116,22 @@ function CalculadoraLubri() {
 
 
   const calcularResultados2 = () => {
-    const eje_mm2 = parseFloat(formData2.eje_mm2);
-    const longitud_mm2 = parseFloat(formData2.longitud_mm2);
+
+    var eje_mm2 = 0
+    var longitud_mm2 = 0
+    if(selectedOption ==='in'){
+        eje_mm2 = parseFloat(formData2.eje_mm2)*25.4;
+        longitud_mm2 = parseFloat(formData2.longitud_mm2)*25.4;
+    }else{
+        eje_mm2 = parseFloat(formData2.eje_mm2);
+        longitud_mm2 = parseFloat(formData2.longitud_mm2);
+    }
     const fs2 = parseFloat(formData2.fs2);
+
+
+
     const sistemasAutomaticos1h2 = (eje_mm2 * longitud_mm2* 0.002 * 25.4 * 3.1416*fs2  / 8000);
-    console.log(sistemasAutomaticos1h2);
+    console.log(eje_mm2);
     const sistemasManual8h2 = (eje_mm2 * longitud_mm2* 0.002 * 25.4 * 3.1416*fs2 / 1000);
     const sistemasAutomaticos1hin2 = sistemasAutomaticos1h2/16.387;
     const sistemasAutomaticos8hin2 = sistemasManual8h2/16.387;
@@ -153,11 +177,17 @@ function CalculadoraLubri() {
 
 
   const calcularResultados3 = () => {
-    const eje_mm3 = parseFloat(formData3.eje_mm3);
-    const longitud_mm3 = parseFloat(formData3.longitud_mm3);
+    var eje_mm3 = 0;
+    var longitud_mm3 = 0;
+    if(selectedOption ==='in'){
+        eje_mm3 = parseFloat(formData3.eje_mm3)*25.4;
+        longitud_mm3 = parseFloat(formData3.longitud_mm3) *25.4;
+    }else{
+        eje_mm3 = parseFloat(formData3.eje_mm3);
+        longitud_mm3 = parseFloat(formData3.longitud_mm3);
+    }
     const fs3 = parseFloat(formData3.fs3);
     const sistemasAutomaticos1h3 = (eje_mm3 * longitud_mm3* 0.002 * 25.4 * fs3 / 8000);
-    console.log(eje_mm3 +" " + longitud_mm3 +" "+fs3);
     const sistemasManual8h3 = (eje_mm3 * longitud_mm3* 0.002 * 25.4 * fs3 / 1000);
     const sistemasAutomaticos1hin3 = sistemasAutomaticos1h3/16.387;
     const sistemasAutomaticos8hin3 = sistemasManual8h3/16.387;
@@ -204,31 +234,32 @@ useEffect(() => {
 
 
 const calcularResultados4 = () => {
-  const eje_mm4 = parseFloat(formData4.eje_mm4);
-  const longitud_mm4 = parseFloat(formData4.longitud_mm4);
-  const fs4 = parseFloat(formData4.fs4);
-  const sistemasAutomaticos1h4 = (3.1416 *eje_mm4 * longitud_mm4* 0.002 * 25.4 * fs4 / 8000);
-  console.log(eje_mm4 +" " + longitud_mm4 +" "+fs4);
-  const sistemasManual8h4 = (3.1416 *eje_mm4 * longitud_mm4* 0.002 * 25.4 * fs4  / 1000);
-  const sistemasAutomaticos1hin4 = sistemasAutomaticos1h4/16.387;
-  const sistemasAutomaticos8hin4 = sistemasManual8h4/16.387;
-  setSistemasAutomaticos1h4(sistemasAutomaticos1h4.toFixed(3));
-  setSistemasAutomaticos8h4(sistemasManual8h4.toFixed(3));
-  setSistemasAutomaticos1hin4(sistemasAutomaticos1hin4.toFixed(3));
-  setSistemasAutomaticos8hin4(sistemasAutomaticos8hin4.toFixed(3));
+
+    var eje_mm4 = 0;
+    var longitud_mm4 = 0;
+    if(selectedOption ==='in'){
+        eje_mm4 = parseFloat(formData4.eje_mm4)*25.4;
+        longitud_mm4 = parseFloat(formData4.longitud_mm4) *25.4;
+    }else{
+        eje_mm4 = parseFloat(formData4.eje_mm4);
+        longitud_mm4 = parseFloat(formData4.longitud_mm4);
+    }
+    console.log(eje_mm4 + " " + longitud_mm4);
+    const fs4 = parseFloat(formData4.fs4);
+    const sistemasAutomaticos1h4 = (2*3.1416 *eje_mm4 * longitud_mm4* 0.002 * 25.4 * fs4 / 8000);
+    const sistemasManual8h4 = (2*3.1416 *eje_mm4 * longitud_mm4* 0.002 * 25.4 * fs4  / 1000);
+    const sistemasAutomaticos1hin4 = sistemasAutomaticos1h4/16.387;
+    const sistemasAutomaticos8hin4 = sistemasManual8h4/16.387;
+    setSistemasAutomaticos1h4(sistemasAutomaticos1h4.toFixed(3));
+    setSistemasAutomaticos8h4(sistemasManual8h4.toFixed(3));
+    setSistemasAutomaticos1hin4(sistemasAutomaticos1hin4.toFixed(3));
+    setSistemasAutomaticos8hin4(sistemasAutomaticos8hin4.toFixed(3));
 
 };
 
 const handleFormChange4 = () => {
   calcularResultados4();
 };
-
-
-
-
-
-
-
 
 
 
@@ -357,15 +388,39 @@ const handleFormChange4 = () => {
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <p>Este tipo de rodamiento contiene elementos rodantes en su interior que cumplen la función de reducir la fricción entre dos superficies por el movimiento angular además es uno de los encargados de  resistir esfuerzos debidos a las cargas.</p>
-                <h2>Ingrese los datos del rodamiento</h2>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"></input>
-                    <label class="form-check-label" for="inlineRadio1">mm</label>
+                <h4>Selección de Sistema de Unidades</h4>
+                <p>Por favor indique el tipo de unidad de los datos a ingresar :</p>
+                <div className="d-flex justify-content-center">
+                    <div className="form-check form-check-inline">
+                        <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="mm"
+                        checked={selectedOption === 'mm'}
+                        onChange={handleRadioChange}
+                        />
+                        <label className="form-check-label" htmlFor="inlineRadio1">
+                        mm
+                        </label>
                     </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"></input>
-                    <label class="form-check-label" for="inlineRadio2">in</label>
+                    <div className="form-check form-check-inline">
+                        <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="in"
+                        checked={selectedOption === 'in'}
+                        onChange={handleRadioChange}
+                        />
+                        <label className="form-check-label" htmlFor="inlineRadio2">
+                        in
+                        </label>
+                    </div>
                 </div>
+                <h2>Ingrese los datos del rodamiento</h2>
                 <div className="container">
                 <div className="mb-3">
                     <label htmlFor="eje_mm" className="form-label">Ingrese el diámetro del eje:</label>
@@ -380,7 +435,7 @@ const handleFormChange4 = () => {
                         step="0.1"
                         required
                     />
-                    <span className="input-group-text">mm</span>
+                    <span className="input-group-text">{selectedOption}</span>
                     </div>
                 </div>
 
@@ -430,7 +485,7 @@ const handleFormChange4 = () => {
                             </tr>
                             <tr>
                                 <td>Sistema Manual cada 8 horas</td>
-                                <td>{sistemasAutomaticos1hin}</td>
+                                <td>{sistemasAutomaticos8hin}</td>
                                 <td>{sistemasAutomaticos8h}</td>
                                 <td>{sistemasAutomaticos8h}</td>
                             </tr>
@@ -449,9 +504,39 @@ const handleFormChange4 = () => {
         <div id="collapseBujeLiso" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <p>Este tipo de cojinetes o rodamientos es implementado para realizar movimientos deslizantes, oscilantes, rotatorios, entre otros. Este tipo de cojinetes además son altamente implementados ya que reducen el ruido debido al movimiento mecánico de piezas y exigen poca cantidad de insumos de lubricación.</p>
-                <h2>Ingrese los datos del buje liso</h2>
-
-                <h3>Ingrese los parámetros del mecanismo</h3>
+                <h4>Selección de Sistema de Unidades</h4>
+                <p>Por favor indique el tipo de unidad de los datos a ingresar :</p>
+                <div className="d-flex justify-content-center">
+                    <div className="form-check form-check-inline">
+                        <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="mm"
+                        checked={selectedOption === 'mm'}
+                        onChange={handleRadioChange}
+                        />
+                        <label className="form-check-label" htmlFor="inlineRadio1">
+                        mm
+                        </label>
+                    </div>
+                    <div className="form-check form-check-inline">
+                        <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="in"
+                        checked={selectedOption === 'in'}
+                        onChange={handleRadioChange}
+                        />
+                        <label className="form-check-label" htmlFor="inlineRadio2">
+                        in
+                        </label>
+                    </div>
+                </div>
+                <h2>Ingrese los datos del buje liso:</h2>
                 <div className="mb-3">
                     <label htmlFor="eje_mm2" className="form-label">Ingrese el diámetro del eje:</label>
                     <div className="input-group">
@@ -465,7 +550,8 @@ const handleFormChange4 = () => {
                         step="0.1"
                         required
                     ></input>
-                    <span className="input-group-text">mm</span>
+                    <span className="input-group-text">{selectedOption}</span>
+
                     </div>
                 </div>
 
@@ -481,8 +567,8 @@ const handleFormChange4 = () => {
                         onChange={(e) => { handleChange2(e) }}
                         step="0.1"
                         required
-                    ></input>
-                    <span className="input-group-text">mm</span>
+                    ></input>                    
+                    <span className="input-group-text">{selectedOption}</span>
                     </div>
                 </div>
 
@@ -540,6 +626,38 @@ const handleFormChange4 = () => {
         <div id="collapseTDezlizante" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <p>Las guías deslizantes son piezas de metal ajustable, que se utiliza para fijar en un punto exacto las partes móviles de una maquina o reducir la fricción que se genera por el movimiento, ademas también restringen el movimiento lineal de una pieza o herramienta en una máquina.</p>
+                <h4>Selección de Sistema de Unidades</h4>
+                <p>Por favor indique el tipo de unidad de los datos a ingresar :</p>
+                <div className="d-flex justify-content-center">
+                    <div className="form-check form-check-inline">
+                        <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="mm"
+                        checked={selectedOption === 'mm'}
+                        onChange={handleRadioChange}
+                        />
+                        <label className="form-check-label" htmlFor="inlineRadio1">
+                        mm
+                        </label>
+                    </div>
+                    <div className="form-check form-check-inline">
+                        <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="in"
+                        checked={selectedOption === 'in'}
+                        onChange={handleRadioChange}
+                        />
+                        <label className="form-check-label" htmlFor="inlineRadio2">
+                        in
+                        </label>
+                    </div>
+                </div>
                 <h3>Ingrese los parámetros del mecanismo</h3>
                 <div className="mb-3">
                     <label htmlFor="eje_mm3" className="form-label">Introduzca la longitud de la superficie de mayor contacto:</label>
@@ -554,7 +672,7 @@ const handleFormChange4 = () => {
                         step="0.1"
                         required
                     ></input>
-                    <span className="input-group-text">mm</span>
+                    <span className="input-group-text">{selectedOption}</span>
                     </div>
                 </div>
 
@@ -570,8 +688,8 @@ const handleFormChange4 = () => {
                         onChange={(e) => { handleChange3(e);}}
                         step="0.1"
                         required
-                    ></input>
-                    <span className="input-group-text">mm</span>
+                    ></input>                    
+                    <span className="input-group-text">{selectedOption}</span>
                     </div>
                 </div>
 
@@ -629,6 +747,38 @@ const handleFormChange4 = () => {
         <div id="collapseEngranajeGiro" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <p>Este mecanismo de transmisión está compuesto por engranajes rectos, son dos ruedas dentadas que se acoplan entre sí, donde se denomina engranaje de toro al engranaje mas grande y piñón al engranaje mas pequeño, donde uno actúa como la transmisión y otro como el engranaje que es impulsado respectivamente. Ofrece prestaciones de alta velocidad y gran precisión.</p>
+                <h4>Selección de Sistema de Unidades</h4>
+                <p>Por favor indique el tipo de unidad de los datos a ingresar :</p>
+                <div className="d-flex justify-content-center">
+                    <div className="form-check form-check-inline">
+                        <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="mm"
+                        checked={selectedOption === 'mm'}
+                        onChange={handleRadioChange}
+                        />
+                        <label className="form-check-label" htmlFor="inlineRadio1">
+                        mm
+                        </label>
+                    </div>
+                    <div className="form-check form-check-inline">
+                        <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="in"
+                        checked={selectedOption === 'in'}
+                        onChange={handleRadioChange}
+                        />
+                        <label className="form-check-label" htmlFor="inlineRadio2">
+                        in
+                        </label>
+                    </div>
+                </div>
                 <h3>Ingrese los parámetros del mecanismo</h3>
                 <div className="mb-3">
                     <label htmlFor="eje_mm4" className="form-label">Introduzca el diámetro de paso (P.D.) del piñón:</label>
@@ -643,7 +793,7 @@ const handleFormChange4 = () => {
                         step="0.1"
                         required
                     ></input>
-                    <span className="input-group-text">mm</span>
+                    <span className="input-group-text">{selectedOption}</span>
                     </div>
                 </div>
 
@@ -660,7 +810,7 @@ const handleFormChange4 = () => {
                         step="0.1"
                         required
                     ></input>
-                    <span className="input-group-text">mm</span>
+                    <span className="input-group-text">{selectedOption}</span>
                     </div>
                 </div>
 
