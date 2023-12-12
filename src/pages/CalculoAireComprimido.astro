@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import CalculadoraVortex from '../components/CalculadoraVortex.jsx'
+import CalculoSoplado from '../components/CalculoSoplado.jsx';
 ---
 
 <Layout>
@@ -412,6 +412,7 @@ import CalculadoraVortex from '../components/CalculadoraVortex.jsx'
                                     </tbody>
                                     </table>
                             </div>
+                            <CalculoSoplado client:only/>
                         </div>
                     </div>
                 </div>

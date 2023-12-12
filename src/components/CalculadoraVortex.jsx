@@ -96,7 +96,7 @@ export default function CalculadoraVortex() {
                 <h4>Coeficiente de Transferencia de Calor</h4>
                 <p>Por favor ingrese los valores de temperatura solicitados :</p>
                 <div className="container">
-                    <div className="mb-3">
+                    <div className="row mb-3">
                         <label htmlFor="TempInt" className="form-label">Temperatura interna del tablero:</label>
                         <div className="input-group">
                         <input
