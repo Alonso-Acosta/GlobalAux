@@ -422,75 +422,89 @@ const handleFormChange4 = () => {
                 </div>
                 <h2>Ingrese los datos del rodamiento</h2>
                 <div className="container">
-                <div className="mb-3">
-                    <label htmlFor="eje_mm" className="form-label">Ingrese el diámetro del eje:</label>
-                    <div className="input-group">
-                    <input
-                        type="number"
-                        className="form-control"
-                        id="eje_mm"
-                        name="eje_mm"
-                        value={formData.eje_mm}
-                        onChange={(e) => { handleChange(e); }}
-                        step="0.1"
-                        required
-                    />
-                    <span className="input-group-text">{selectedOption}</span>
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="eje_mm" className="form-label">Ingrese el diámetro del eje:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <div className="input-group">
+                            <input
+                                type="number"
+                                className="form-control"
+                                id="eje_mm"
+                                name="eje_mm"
+                                value={formData.eje_mm}
+                                onChange={(e) => { handleChange(e); }}
+                                step="0.1"
+                                required
+                            />
+                            <span className="input-group-text">{selectedOption}</span>
+                        </div>
                     </div>
                 </div>
 
-                <div className="mb-3">
-                    <label htmlFor="filas" className="form-label">Introduce el número de filas de bolas en el rodamiento:</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    id="filas"
-                    name="filas"
-                    value={formData.filas}
-                    onChange={(e) => { handleChange(e);}}
-                    required
-                    />
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="filas" className="form-label">Introduce el número de filas de bolas en el rodamiento:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <input
+                        type="number"
+                        className="form-control"
+                        id="filas"
+                        name="filas"
+                        value={formData.filas}
+                        onChange={(e) => { handleChange(e);}}
+                        required
+                        />
+                    </div>
                 </div>
 
-                <div className="mb-3">
-                    <label htmlFor="fs" className="form-label">Ingrese el factor de seguridad:</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    id="fs"
-                    name="fs"
-                    value={formData.fs}
-                    onChange={(e) => { handleChange(e);}}
-                    step="0.1"
-                    required
-                    />
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="fs" className="form-label">Ingrese el factor de seguridad:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <input
+                        type="number"
+                        className="form-control"
+                        id="fs"
+                        name="fs"
+                        value={formData.fs}
+                        onChange={(e) => { handleChange(e);}}
+                        step="0.1"
+                        required
+                        />
+                    </div>
                 </div>
                 </div>
-                <div className="mb-3">
-                    <table className="table">
-                        <thead>
-                            <tr>
-                            <th></th>
-                            <th scope="col">Pulgadas cúbicas (in³)</th>
-                            <th scope="col">Centímetros cúbicos (cm³)</th>
-                            <th scope="col">Peso del lubricante en gramos (g)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Sistema Automático por hora</td>
-                                <td>{sistemasAutomaticos1hin}</td>
-                                <td>{sistemasAutomaticos1h}</td>
-                                <td>{sistemasAutomaticos1h}</td>
-                            </tr>
-                            <tr>
-                                <td>Sistema Manual cada 8 horas</td>
-                                <td>{sistemasAutomaticos8hin}</td>
-                                <td>{sistemasAutomaticos8h}</td>
-                                <td>{sistemasAutomaticos8h}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div className="mb-3 row justify-content-center">
+                    <div className="col-md-9">
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                <th></th>
+                                <th className='text-center' scope="col">Pulgadas cúbicas (in³)</th>
+                                <th className='text-center' scope="col">Centímetros cúbicos (cm³)</th>
+                                <th className='text-center' scope="col">Peso del lubricante en gramos (g)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sistema Automático por hora</td>
+                                    <td className='text-center'>{sistemasAutomaticos1hin}</td>
+                                    <td className='text-center'>{sistemasAutomaticos1h}</td>
+                                    <td className='text-center'>{sistemasAutomaticos1h}</td>
+                                </tr>
+                                <tr>
+                                    <td>Sistema Manual cada 8 horas</td>
+                                    <td className='text-center'>{sistemasAutomaticos8hin}</td>
+                                    <td className='text-center'>{sistemasAutomaticos8h}</td>
+                                    <td className='text-center'>{sistemasAutomaticos8h}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -537,81 +551,97 @@ const handleFormChange4 = () => {
                     </div>
                 </div>
                 <h2>Ingrese los datos del buje liso:</h2>
-                <div className="mb-3">
-                    <label htmlFor="eje_mm2" className="form-label">Ingrese el diámetro del eje:</label>
-                    <div className="input-group">
-                    <input
-                        type="number"
-                        className="form-control"
-                        id="eje_mm2"
-                        name="eje_mm2"
-                        value={formData2.eje_mm2}
-                        onChange={(e) => { handleChange2(e) }}
-                        step="0.1"
-                        required
-                    ></input>
-                    <span className="input-group-text">{selectedOption}</span>
-
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="eje_mm2" className="form-label">Ingrese el diámetro del eje:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <div className="input-group">
+                            <input
+                                type="number"
+                                className="form-control"
+                                id="eje_mm2"
+                                name="eje_mm2"
+                                value={formData2.eje_mm2}
+                                onChange={(e) => { handleChange2(e) }}
+                                step="0.1"
+                                required
+                            ></input>
+                            <span className="input-group-text">{selectedOption}</span>
+                        </div>
                     </div>
                 </div>
 
-                <div className="mb-3">
-                    <label htmlFor="longitud_mm2" className="form-label">Introduzca la longitud del rodamiento:</label>
-                    <div className="input-group">
-                    <input
+                <div className=" row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="longitud_mm2" className="form-label">Introduzca la longitud del rodamiento:</label>
+
+                    </div>
+                    <div className='col-md-4'>
+                        <div className="input-group">
+                            <input
+                                type="number"
+                                className="form-control"
+                                id="longitud_mm2"
+                                name="longitud_mm2"
+                                value={formData2.longitud_mm2}
+                                onChange={(e) => { handleChange2(e) }}
+                                step="0.1"
+                                required
+                            ></input>                    
+                            <span className="input-group-text">{selectedOption}</span>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="fs2" className="form-label">Ingrese el factor de seguridad:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <input
                         type="number"
                         className="form-control"
-                        id="longitud_mm2"
-                        name="longitud_mm2"
-                        value={formData2.longitud_mm2}
+                        id="fs2"
+                        name="fs2"
+                        value={formData2.fs2}
                         onChange={(e) => { handleChange2(e) }}
                         step="0.1"
                         required
-                    ></input>                    
-                    <span className="input-group-text">{selectedOption}</span>
+                        ></input>
                     </div>
                 </div>
-
-                <div className="mb-3">
-                    <label htmlFor="fs2" className="form-label">Ingrese el factor de seguridad:</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    id="fs2"
-                    name="fs2"
-                    value={formData2.fs2}
-                    onChange={(e) => { handleChange2(e) }}
-                    step="0.1"
-                    required
-                    ></input>
-                </div>
-
-                <div className="mt-4">
-                    <h3>Resultados</h3>
-                    <table className="table">
-                    <thead>
-                        <tr>
-                        <th></th>
-                        <th scope="col">Pulgadas cúbicas (in³)</th>
-                        <th scope="col">Centímetros cúbicos (cm³)</th>
-                        <th scope="col">Peso del lubricante en gramos (g)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>Sistema Automático por hora</td>
-                        <td>{sistemasAutomaticos1hin2}</td>
-                        <td>{sistemasAutomaticos1h2}</td>
-                        <td>{sistemasAutomaticos1h2}</td>
-                        </tr>
-                        <tr>
-                        <td>Sistema Manual cada 8 horas</td>
-                        <td>{sistemasAutomaticos8hin2}</td>
-                        <td>{sistemasAutomaticos8h2}</td>
-                        <td>{sistemasAutomaticos8h2}</td>
-                        </tr>
-                    </tbody>
-                    </table>
+                <h3>Resultados</h3>
+                <div className="mt-4 row justify-content-center">
+                    <div className="col-md-9">
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                <th></th>
+                                <th className='text-center' scope="col">Pulgadas cúbicas (in³)</th>
+                                <th className='text-center' scope="col">Centímetros cúbicos (cm³)</th>
+                                <th className='text-center' scope="col">Peso del lubricante en gramos (g)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Sistema Automático por hora</td>
+                                <td className='text-center'>{sistemasAutomaticos1hin2}</td>
+                                <td className='text-center'>{sistemasAutomaticos1h2}</td>
+                                <td className='text-center'>{sistemasAutomaticos1h2}</td>
+                                </tr>
+                                <tr>
+                                <td>Sistema Manual cada 8 horas</td>
+                                <td className='text-center'>{sistemasAutomaticos8hin2}</td>
+                                <td className='text-center'>{sistemasAutomaticos8h2}</td>
+                                <td className='text-center'>{sistemasAutomaticos8h2}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
             </div>
@@ -659,80 +689,99 @@ const handleFormChange4 = () => {
                     </div>
                 </div>
                 <h3>Ingrese los parámetros del mecanismo</h3>
-                <div className="mb-3">
-                    <label htmlFor="eje_mm3" className="form-label">Introduzca la longitud de la superficie de mayor contacto:</label>
-                    <div className="input-group">
-                    <input
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="eje_mm3" className="form-label">Introduzca la longitud de la superficie de mayor contacto:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <div className="input-group">
+                            <input
+                                type="number"
+                                className="form-control"
+                                id="eje_mm3"
+                                name="eje_mm3"
+                                value={formData3.eje_mm3}
+                                onChange={(e) => { handleChange3(e);}}
+                                step="0.1"
+                                required
+                            ></input>
+                            <span className="input-group-text">{selectedOption}</span>
+                        </div>
+                    </div>
+
+                    
+
+                    
+                </div>
+
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="longitud_mm3" className="form-label">Introduzca el ancho de la superficie de mayor contacto:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <div className="input-group">
+                        <input
+                            type="number"
+                            className="form-control"
+                            id="longitud_mm3"
+                            name="longitud_mm3"
+                            value={formData3.longitud_mm3}
+                            onChange={(e) => { handleChange3(e);}}
+                            step="0.1"
+                            required
+                        ></input>                    
+                        <span className="input-group-text">{selectedOption}</span>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="fs3" className="form-label">Ingrese el factor de seguridad:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <input
                         type="number"
                         className="form-control"
-                        id="eje_mm3"
-                        name="eje_mm3"
-                        value={formData3.eje_mm3}
+                        id="fs3"
+                        name="fs3"
+                        value={formData3.fs3}
                         onChange={(e) => { handleChange3(e);}}
                         step="0.1"
                         required
-                    ></input>
-                    <span className="input-group-text">{selectedOption}</span>
+                        ></input>
                     </div>
                 </div>
-
-                <div className="mb-3">
-                    <label htmlFor="longitud_mm3" className="form-label">Introduzca el ancho de la superficie de mayor contacto:</label>
-                    <div className="input-group">
-                    <input
-                        type="number"
-                        className="form-control"
-                        id="longitud_mm3"
-                        name="longitud_mm3"
-                        value={formData3.longitud_mm3}
-                        onChange={(e) => { handleChange3(e);}}
-                        step="0.1"
-                        required
-                    ></input>                    
-                    <span className="input-group-text">{selectedOption}</span>
+                <h3>Resultados</h3>
+                <div className="mt-4 row justify-content-center">
+                    <div className="col-md-9">
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                <th></th>
+                                <th className='text-center' scope="col">Pulgadas cúbicas (in³)</th>
+                                <th className='text-center' scope="col">Centímetros cúbicos (cm³)</th>
+                                <th className='text-center' scope="col">Peso del lubricante en gramos (g)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Sistema Automático por hora</td>
+                                <td className='text-center'>{sistemasAutomaticos1hin3}</td>
+                                <td className='text-center'>{sistemasAutomaticos1h3}</td>
+                                <td className='text-center'>{sistemasAutomaticos1h3}</td>
+                                </tr>
+                                <tr>
+                                <td>Sistema Manual cada 8 horas</td>
+                                <td className='text-center'>{sistemasAutomaticos8hin3}</td>
+                                <td className='text-center'>{sistemasAutomaticos8h3}</td>
+                                <td className='text-center'>{sistemasAutomaticos8h3}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-
-                <div className="mb-3">
-                    <label htmlFor="fs3" className="form-label">Ingrese el factor de seguridad:</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    id="fs3"
-                    name="fs3"
-                    value={formData3.fs3}
-                    onChange={(e) => { handleChange3(e);}}
-                    step="0.1"
-                    required
-                    ></input>
-                </div>
-
-                <div className="mt-4">
-                    <h3>Resultados</h3>
-                    <table className="table">
-                    <thead>
-                        <tr>
-                        <th></th>
-                        <th scope="col">Pulgadas cúbicas (in³)</th>
-                        <th scope="col">Centímetros cúbicos (cm³)</th>
-                        <th scope="col">Peso del lubricante en gramos (g)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>Sistema Automático por hora</td>
-                        <td>{sistemasAutomaticos1hin3}</td>
-                        <td>{sistemasAutomaticos1h3}</td>
-                        <td>{sistemasAutomaticos1h3}</td>
-                        </tr>
-                        <tr>
-                        <td>Sistema Manual cada 8 horas</td>
-                        <td>{sistemasAutomaticos8hin3}</td>
-                        <td>{sistemasAutomaticos8h3}</td>
-                        <td>{sistemasAutomaticos8h3}</td>
-                        </tr>
-                    </tbody>
-                    </table>
                 </div>
             </div>
         </div>
@@ -780,80 +829,96 @@ const handleFormChange4 = () => {
                     </div>
                 </div>
                 <h3>Ingrese los parámetros del mecanismo</h3>
-                <div className="mb-3">
-                    <label htmlFor="eje_mm4" className="form-label">Introduzca el diámetro de paso (P.D.) del piñón:</label>
-                    <div className="input-group">
-                    <input
-                        type="number"
-                        className="form-control"
-                        id="eje_mm4"
-                        name="eje_mm4"
-                        value={formData4.eje_mm4}
-                        onChange={(e) => { handleChange4(e);}}
-                        step="0.1"
-                        required
-                    ></input>
-                    <span className="input-group-text">{selectedOption}</span>
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="eje_mm4" className="form-label">Introduzca el diámetro de paso (P.D.) del piñón:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <div className="input-group">
+                            <input
+                                type="number"
+                                className="form-control"
+                                id="eje_mm4"
+                                name="eje_mm4"
+                                value={formData4.eje_mm4}
+                                onChange={(e) => { handleChange4(e);}}
+                                step="0.1"
+                                required
+                            ></input>
+                            <span className="input-group-text">{selectedOption}</span>
+                        </div>
                     </div>
                 </div>
 
-                <div className="mb-3">
-                    <label htmlFor="longitud_mm4" className="form-label">Introduzca el ancho del rodamiento:</label>
-                    <div className="input-group">
-                    <input
-                        type="number"
-                        className="form-control"
-                        id="longitud_mm4"
-                        name="longitud_mm4"
-                        value={formData4.longitud_mm4}
-                        onChange={(e) => { handleChange4(e);}}
-                        step="0.1"
-                        required
-                    ></input>
-                    <span className="input-group-text">{selectedOption}</span>
+                <div className="row mb-3 justify-content-center">
+                    <div className='col-md-6'>
+                        <label htmlFor="longitud_mm4" className="form-label">Introduzca el ancho del rodamiento:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <div className="input-group">
+                        <input
+                            type="number"
+                            className="form-control"
+                            id="longitud_mm4"
+                            name="longitud_mm4"
+                            value={formData4.longitud_mm4}
+                            onChange={(e) => { handleChange4(e);}}
+                            step="0.1"
+                            required
+                        ></input>
+                        <span className="input-group-text">{selectedOption}</span>
+                        </div>
                     </div>
                 </div>
 
-                <div className="mb-3">
-                    <label htmlFor="fs4" className="form-label">Ingrese el factor de seguridad:</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    id="fs4"
-                    name="fs4"
-                    value={formData4.fs4}
-                    onChange={(e) => { handleChange4(e);}}
-                    step="0.1"
-                    required
-                    ></input>
+                <div className="row mb-3 justify-content-center">
+                    
+                    <div className='col-md-6'>
+                        <label htmlFor="fs4" className="form-label">Ingrese el factor de seguridad:</label>
+                    </div>
+                    <div className='col-md-4'>
+                        <input
+                        type="number"
+                        className="form-control"
+                        id="fs4"
+                        name="fs4"
+                        value={formData4.fs4}
+                        onChange={(e) => { handleChange4(e);}}
+                        step="0.1"
+                        required
+                        ></input>
+                    </div>
+                    
+                  
                 </div>
-
-                <div className="mt-4">
-                    <h3>Resultados</h3>
-                    <table className="table">
-                    <thead>
-                        <tr>
-                        <th></th>
-                        <th scope="col">Pulgadas cúbicas (in³)</th>
-                        <th scope="col">Centímetros cúbicos (cm³)</th>
-                        <th scope="col">Peso del lubricante en gramos (g)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>Sistema Automático por hora</td>
-                        <td>{sistemasAutomaticos1hin4}</td>
-                        <td>{sistemasAutomaticos1h4}</td>
-                        <td>{sistemasAutomaticos1h4}</td>
-                        </tr>
-                        <tr>
-                        <td>Sistema Manual cada 8 horas</td>
-                        <td>{sistemasAutomaticos8hin4}</td>
-                        <td>{sistemasAutomaticos8h4}</td>
-                        <td>{sistemasAutomaticos8h4}</td>
-                        </tr>
-                    </tbody>
-                    </table>
+                <h3>Resultados</h3>
+                <div className="mt-4 row justify-content-center">
+                    <div className="col-md-9">
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                <th></th>
+                                <th className='text-center' scope="col">Pulgadas cúbicas (in³)</th>
+                                <th className='text-center' scope="col">Centímetros cúbicos (cm³)</th>
+                                <th className='text-center' scope="col">Peso del lubricante en gramos (g)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Sistema Automático por hora</td>
+                                <td className='text-center'>{sistemasAutomaticos1hin4}</td>
+                                <td className='text-center'>{sistemasAutomaticos1h4}</td>
+                                <td className='text-center'>{sistemasAutomaticos1h4}</td>
+                                </tr>
+                                <tr>
+                                <td>Sistema Manual cada 8 horas</td>
+                                <td className='text-center'>{sistemasAutomaticos8hin4}</td>
+                                <td className='text-center'>{sistemasAutomaticos8h4}</td>
+                                <td className='text-center'>{sistemasAutomaticos8h4}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
