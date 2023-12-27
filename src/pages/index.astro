@@ -291,9 +291,7 @@ import Brand from '../components/brand.astro';
 </Layout>
 
 <style>
-	.wow{
-		min-height: 100%;
-	}
+	
 	.carousel-caption {
 		top: 20%;
 		font-size: 1.5vw;
@@ -499,17 +497,19 @@ import Brand from '../components/brand.astro';
 		display: block;
 		overflow: hidden;
 		position: relative;
+		height: 300px;
 	}
 
 	.default-blog-news .img-holder a {
 		width: 100%;
-
+		height: 100%;
 	}
 
 	.default-blog-news .img-holder img {
 		transform: scale(1);
 		transition: all 0.5s ease 0s;
 		width: 100%;
+		object-fit: contain;
 	}
 
 	.default-blog-news:hover .img-holder img {
