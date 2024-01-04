@@ -365,28 +365,19 @@
 </div>
 
 <!--End mainmenu area-->
-<script>
+<script is:inline>
     document.addEventListener('DOMContentLoaded', function () {
-        var dropdownTogglers = document.querySelectorAll('.dropdown-toggle');
+        var dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
-        document.addEventListener('click', function (event) {
-            dropdownTogglers.forEach(function (toggler) {
-                var parentDropdown = toggler.closest('.dropdown');
-                if (parentDropdown && !parentDropdown.contains(event.target)) {
-                    // Si el clic fue fuera del menú desplegable, ciérralo
-                    parentDropdown.classList.remove('show');
-                }
+        dropdownMenus.forEach(function (dropdownMenu) {
+            dropdownMenu.addEventListener('click', function (e) {
+                e.stopPropagation();
             });
         });
 
-        dropdownTogglers.forEach(function (toggler) {
-            toggler.addEventListener('click', function (e) {
-                e.stopPropagation(); // Evita que el evento de clic llegue al documento
-                var parentDropdown = this.closest('.dropdown');
-                if (parentDropdown) {
-                    // Alternar la clase 'show' para mostrar/ocultar el menú desplegable
-                    parentDropdown.classList.toggle('show');
-                }
+        dropdownMenus.forEach(function (dropdownMenu) {
+            dropdownMenu.addEventListener('touchstart', function (e) {
+                e.stopPropagation();
             });
         });
     });
