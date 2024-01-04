@@ -369,8 +369,14 @@
 
 <!--End mainmenu area-->
 <script>
-    $('.dropdown-menu').on('click', function (e) {
-        e.stopPropagation();
+    document.addEventListener('DOMContentLoaded', function () {
+        var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+        dropdownMenus.forEach(function (dropdownMenu) {
+            dropdownMenu.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+        });
     });
 </script>
 
