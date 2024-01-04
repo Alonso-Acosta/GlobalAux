@@ -12,9 +12,6 @@
 
     </div>
 </section> -->
----
-
----
 <section class="top-bar-area bg-dark text-light">
     <div class="container">
         <div class="row">
@@ -369,11 +366,11 @@
 
 <!--End mainmenu area-->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+   document.addEventListener('DOMContentLoaded', function () {
         var dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
         dropdownMenus.forEach(function (dropdownMenu) {
-            dropdownMenu.addEventListener('click', function (e) {
+            dropdownMenu.addEventListener('touchstart', function (e) {
                 e.stopPropagation();
             });
         });
