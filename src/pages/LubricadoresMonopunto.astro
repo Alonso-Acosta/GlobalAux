@@ -39,13 +39,13 @@ import Footer from '../components/Footer.astro';
 			<div class="section-title">
 				<h2>Tipos de Lubricadores Monopunto</h2>
 			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
 					<button type="button" class="btn btn-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalElectroquimico">
 						<div class="default-blog-news wow fadeInUp animated animated"
 							style="visibility: visible; animation-name: fadeInUp;">
 							<figure class="img-holder">
-								<img src="images/Productos/LubricacionMonopunto/lubricacion-monopunto-6.webp" alt="News">
+								<img class="object-fit-cover" src="images/Productos/LubricacionMonopunto/lubricacion-monopunto-6.webp" alt="News">
 								<figcaption class="overlay">
 									<div class="box">
 										<div class="content">
@@ -62,8 +62,8 @@ import Footer from '../components/Footer.astro';
 						</div>
 					</button>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-					<button type="button" class="btn btn-link text-decoration-none w-100" data-bs-toggle="modal" data-bs-target="#ModalElectromecanico">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
+					<button type="button" class="btn btn-link text-decoration-non" data-bs-toggle="modal" data-bs-target="#ModalElectromecanico">
 						<div class="default-blog-news wow fadeInUp animated animated"
 							style="visibility: visible; animation-name: fadeInUp;">
 							<figure class="img-holder">
@@ -84,7 +84,7 @@ import Footer from '../components/Footer.astro';
 						</div>
 					</button>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
 					<button type="button" class="btn btn-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalResorte">
 						<div class="default-blog-news wow fadeInUp animated animated"
 							style="visibility: visible; animation-name: fadeInUp;">
@@ -106,7 +106,7 @@ import Footer from '../components/Footer.astro';
 						</div>
 					</button>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
 					<button type="button" class="btn btn-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalOtros">
 						<div class="default-blog-news wow fadeInUp animated animated"
 							style="visibility: visible; animation-name: fadeInUp;">
@@ -887,17 +887,6 @@ import Footer from '../components/Footer.astro';
 	.blog-single-area .add-comment-box form button:hover {}
 
 
-
-
-
-
-
-
-
-
-
-
-
 	/* Cards */
 	.blog-section2 {
 	}
@@ -1009,6 +998,9 @@ import Footer from '../components/Footer.astro';
 		transform: scale(1);
 		transition: all 0.5s ease 0s;
 		height: 100%;
+		width: 100%;
+		min-width: 325px;
+		object-fit: contain;
 	}
 
 	.default-blog-news:hover .img-holder img {
