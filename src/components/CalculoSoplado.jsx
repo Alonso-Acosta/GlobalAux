@@ -248,7 +248,7 @@ export default function CalculoSoplado() {
                 </div>
                 <h3>Cálculos Preliminares del Sistema</h3>
                 <div className="row mt-4 dflex justify-content-center">
-                    <div className="col-md-8">
+                    <div className="col-md-8 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -304,7 +304,7 @@ export default function CalculoSoplado() {
                 </div>
                 </div>
                 <div className="row mt-4 justify-content-center">
-                    <div className="col-md-8">
+                    <div className="col-md-8 table-responsive">
                         <table className="table">
                         <thead>
                             <tr>
@@ -328,7 +328,7 @@ export default function CalculoSoplado() {
                 <p>A continuación, se muestra una tabla comparativa de consumo y costos entre el sistema propuesto por Global Automation y el sistema actual</p>
                 <h3 className='mt-5'>Tabla Comparativa</h3>
                 <div className="row mt-4 justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table mt-3">
                             <thead>
                                 <tr>

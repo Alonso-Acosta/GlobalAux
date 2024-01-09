@@ -514,7 +514,7 @@ export default function CalculadoraLubriReAceite() {
                 </div>
                 </div>
                 <div className="mb-3 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -642,7 +642,7 @@ export default function CalculadoraLubriReAceite() {
                 </div>
                 <h3>Resultados</h3>
                 <div className="mt-4 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -771,7 +771,7 @@ export default function CalculadoraLubriReAceite() {
                 </div>
                 <h3>Resultados</h3>
                 <div className="mt-4 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -902,7 +902,7 @@ export default function CalculadoraLubriReAceite() {
                 <h3>Resultados</h3>
 
                 <div className="mt-4 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -1049,7 +1049,7 @@ export default function CalculadoraLubriReAceite() {
                 </div>
                 <h3>Resultados</h3>
                 <div className="mt-4 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -1073,9 +1073,6 @@ export default function CalculadoraLubriReAceite() {
             </div>
         </div>
     </div>
-    
-    
-    
     </div>
     </div>
   )

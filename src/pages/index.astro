@@ -1,13 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Carousel from '../components/Carousel.astro';
 import Formulario from '../components/Formulario.astro';
-import Brand from '../components/brand.astro';
+import CarouselClientes from '../components/CarouselClientes.astro';
 ---
 
 <Layout>
+	
 	<!--Start Carousel wrapper-->
 	<div id="carouselExampleCaptions" class="carousel slide">
 		<div class="carousel-indicators">
@@ -20,19 +19,19 @@ import Brand from '../components/brand.astro';
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="images/slides/Slide1.jpg" class="d-block w-100" alt="...">
+				<img src="images/slides/Slide1.webp" class="d-block w-100" alt="...">
 				<div class="carousel-caption  d-md-block">
 					<h1>Soluciones Integrales en Automatizacion industrial</h1>
 					<p>Afrontando cada reto, avanzamos hacia la cima de la eficiencia industrial.</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="images/slides/Slide2.jpg" class="d-block w-100" alt="...">
+				<img src="images/slides/Slide2.webp" class="d-block w-100" alt="...">
 				<div class="carousel-caption  d-md-block">
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="images/slides/Slide3.jpg" class="d-block w-100" alt="...">
+				<img src="images/slides/Slide3.webp" class="d-block w-100" alt="...">
 				<div class="carousel-caption d-md-block">
 				</div>
 			</div>
@@ -58,7 +57,7 @@ import Brand from '../components/brand.astro';
 				<div class="col-md-6 col-sm-12">
 
 					<figure class="about-img">
-						<img src="images/slides/nosotros.jpg" alt="about titan builders photo">
+						<img src="images/slides/nosotros.webp" alt="about titan builders photo">
 					</figure>
 				</div>
 				<div class="col-md-6 col-sm-12">
@@ -139,7 +138,7 @@ import Brand from '../components/brand.astro';
 				<div class="col-md-4 col-sm-6">
 					<div class="single-our-service">
 						<figure class="img-box">
-							<a href="single-service.html"><img src="images/slides/importaciones.jpg"
+							<a href="single-service.html"><img src="images/slides/importaciones.webp"
 									alt="Awesome Image"></a>
 						</figure>
 						<a class="text-decoration-none" href="single-service.html">
@@ -152,7 +151,7 @@ import Brand from '../components/brand.astro';
 				<div class="col-md-4 col-sm-6">
 					<div class="single-our-service">
 						<figure class="img-box">
-							<a href="single-service.html"><img src="images/slides/asesoria.jpg" alt="Awesome Image"></a>
+							<a href="single-service.html"><img src="images/slides/asesoria.webp" alt="Awesome Image"></a>
 						</figure>
 						<a class="text-decoration-none" href="single-service.html">
 							<h4>Asesoría especializada</h4>
@@ -165,7 +164,7 @@ import Brand from '../components/brand.astro';
 				<div class="col-md-4 col-sm-6">
 					<div class="single-our-service">
 						<figure class="img-box">
-							<a href="single-service.html"><img src="images/slides/capacitacion.jpg"
+							<a href="single-service.html"><img src="images/slides/capacitacion.webp"
 									alt="Awesome Image"></a>
 						</figure>
 						<a class="text-decoration-none" href="single-service.html">
@@ -193,7 +192,7 @@ import Brand from '../components/brand.astro';
 					<div class="default-blog-news wow fadeInUp animated animated"
 						style="visibility: visible; animation-name: fadeInUp;">
 						<figure class="img-holder">
-							<a href="/BlogAirJet"><img src="images/Blog/Blog1/ajapp.jpg" alt="News"></a>
+							<a href="/BlogAirJet"><img src="images/Blog/Blog1/ajapp.webp" alt="News"></a>
 							<figcaption class="overlay">
 								<div class="box">
 									<div class="content">
@@ -281,13 +280,18 @@ import Brand from '../components/brand.astro';
 			</div>
 		</div>
 	</section>
-
+	
+	<CarouselClientes />
 	<Formulario />
 
-	<Footer />
+	
+
+
 </Layout>
 
 <style>
+
+	
 	
 	.carousel-caption {
 		top: 20%;

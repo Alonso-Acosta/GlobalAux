@@ -479,7 +479,7 @@ const handleFormChange4 = () => {
                 </div>
                 </div>
                 <div className="mb-3 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -616,7 +616,7 @@ const handleFormChange4 = () => {
                 </div>
                 <h3>Resultados</h3>
                 <div className="mt-4 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -756,7 +756,7 @@ const handleFormChange4 = () => {
                 </div>
                 <h3>Resultados</h3>
                 <div className="mt-4 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -893,7 +893,7 @@ const handleFormChange4 = () => {
                 </div>
                 <h3>Resultados</h3>
                 <div className="mt-4 row justify-content-center">
-                    <div className="col-md-9">
+                    <div className="col-md-9 table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>

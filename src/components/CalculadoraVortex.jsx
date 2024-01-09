@@ -262,8 +262,6 @@ export default function CalculadoraVortex() {
                     </div>
                 </div>
                 <div className="row mb-3 justify-content-center">
-
-                     
                     <div className='col-md-6'>
                         <label htmlFor="ProfTab" className="form-label">Profundidad del tablero:</label>
                     </div>
