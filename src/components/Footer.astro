@@ -1,3 +1,9 @@
+---
+// Importa el icono de YouTube
+import { YouTubeIcon } from '@heroicons/react/outline';
+---
+
+
 
 <footer>
     <div class="footer-main sec-padd2">
@@ -12,20 +18,19 @@
                         </div>
                         <p class="footer-words">Con 30 años de liderazgo en automatización industrial (neumática, hidráulica, etc.), ofrecemos soluciones de calidad, asesoría y capacitación personalizada. Su socio confiable para el progreso. </p>
                         <ul class="list-inline footer-social">
-                            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCIi8WjDLRzmYuLhLziBx6rQ"><i class="fa fa-youtube text-white"></i></a></li>
-                            <li class="list-inline-item"><a href="https://twitter.com/GlobalAutomati2"><i class="fa fa-twitter text-white"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/company/global-automation-sas/"><i class="fa fa-linkedin text-white"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCIi8WjDLRzmYuLhLziBx6rQ"><i class="bi bi-youtube"></i></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/GlobalAutomati2"><i class="bi bi-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/company/global-automation-sas/"><i class="bi bi-linkedin"></i></a></li>
                         </ul>
-
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-col service-col">
                         <h3 class="footer-title">Servicios</h3>
-                        <ul class="footer-list">
-                            <li><a href="AuditoriaLubricacion">Auditoría En Lubricación</a></li>
-                            <li><a href="AudotoriaAireComprimido">Auditoría En Aire Comprimido</a></li>
-                            <li><a href="LubricacionBasadaEnConfiabilidad">Lubricacion Basa en Confiabilidad</a></li>
+                        <ul class="bg-transparent ps-0" id="list">
+                            <li><a class="text-decoration-none" href="AuditoriaLubricacion">Auditoría En Lubricación</a></li>
+                            <li><a class="text-decoration-none" href="AudotoriaAireComprimido">Auditoría En Aire Comprimido</a></li>
+                            <li><a class="text-decoration-none" href="LubricacionBasadaEnConfiabilidad">Lubricacion Basada en Confiabilidad</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,9 +71,9 @@
                             <p>We dont’t do spam and Your mail id very confidential.</p>
                             
                             <ul class="social-icon">
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCIi8WjDLRzmYuLhLziBx6rQ"><i class="bi bi-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/GlobalAutomati2"><i class="bi bi-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/global-automation-sas/"><i class="bi bi-linkedin"></i></a></li>
 
                             </ul>
                         </div>
@@ -86,9 +91,8 @@
                 <div class="col-md-9">
                     <nav class="footer-menu pull-right">
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a  class="text-decoration-none" href="index.html">Inicio</a></li>
-                            <li class="list-inline-item"><a  class="text-decoration-none" href="our-service-1.html">Servicios</a></li>
-                            <li class="list-inline-item"><a  class="text-decoration-none" href="contact-us.html">contact us</a></li>
+                            <li class="list-inline-item"><a  class="text-decoration-none" href="/">Inicio</a></li>
+                            <li class="list-inline-item"><a  class="text-decoration-none" href="/">Contactenos</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -152,11 +156,12 @@ width: 100%;
     border-radius: 50%;
     display: block;
     height: 44px;
-    color: #ad2727;
+    color: white;
     line-height: 45px;
     text-align: center;
     width: 44px;
 }
+
 
 .footer-title {
     font-weight: 400;

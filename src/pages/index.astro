@@ -218,7 +218,7 @@ import CarouselClientes from '../components/CarouselClientes.astro';
 					<div class="default-blog-news wow fadeInUp animated animated"
 						style="visibility: visible; animation-name: fadeInUp;">
 						<figure class="img-holder">
-							<a href="/varistat"><img src="images/Blog/Blog2/varistat.webp" alt="News"></a>
+							<a class="d-flex align-items-center" href="/varistat"><img src="images/Blog/Blog2/varistat.webp" alt="News"></a>
 							<figcaption class="overlay">
 								<div class="box">
 									<div class="content">
@@ -246,7 +246,7 @@ import CarouselClientes from '../components/CarouselClientes.astro';
 				<div class="col-md-4 col-sm-6 col-xs-12">
 					<div class="default-blog-news wow fadeInUp animated animated"
 						style="visibility: visible; animation-name: fadeInUp;">
-						<figure class="img-holder">
+						<figure class="img-holder d-flex align-items-center">
 							<a href="/BlogOptimizacionAire"><img src="images/Blog/Blog3/SBMart_pipe900.webp" alt="News"></a>
 							<figcaption class="overlay">
 								<div class="box">
@@ -494,11 +494,15 @@ import CarouselClientes from '../components/CarouselClientes.astro';
 		overflow: hidden;
 		position: relative;
 		height: 300px;
+	
 	}
 
 	.default-blog-news .img-holder a {
 		width: 100%;
 		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.default-blog-news .img-holder img {
