@@ -1,6 +1,3 @@
----
-
----
 
 <section class="latest-project sec-padd breadcrumb-area" style="background-image: url(images/slides/LineaAire.webp);">
     <div class="container my-3">
@@ -133,11 +130,41 @@ items.forEach((el) => {
 })
 </script>
 <style>
-    @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
-        display: none;
-    }
+    display: none;
+}
+
+/* Muestra solo un elemento del carousel en pantallas menores a 600px */
+@media (max-width: 599px) {
     .carousel-inner .carousel-item > div:first-child {
+        display: block;
+        margin: auto;
+
+    }
+}
+
+/* Muestra dos elementos del carousel en pantallas entre 600px y 749px */
+@media (min-width: 600px) and (max-width: 749px) {
+    .carousel-inner .carousel-item > div:first-child,
+    .carousel-inner .carousel-item > div:nth-child(2) {
+        display: block;
+    }
+}
+
+/* Muestra tres elementos del carousel en pantallas entre 750px y 949px */
+@media (min-width: 750px) and (max-width: 949px) {
+    .carousel-inner .carousel-item > div:first-child,
+    .carousel-inner .carousel-item > div:nth-child(2),
+    .carousel-inner .carousel-item > div:nth-child(3) {
+        display: block;
+        margin: auto;
+
+    }
+}
+
+/* Muestra cuatro elementos del carousel en pantallas mayores o iguales a 950px */
+@media (min-width: 950px) {
+    .carousel-inner .carousel-item > div {
         display: block;
     }
 }

@@ -96,9 +96,6 @@
                             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul class="navbar-nav desktop">
                                     <li class="menu-item">
-                                        <a href="/">Inicio</a>
-                                    </li>
-                                    <li class="menu-item">
                                         <a  href="#">Productos</a>
                                         <ul class="drop-menu">
                                             <li class="drop-menu-item"><a>Lubricacion Industrial</a>
@@ -153,6 +150,9 @@
                                                     </ul>
                                                 </li>
                                         </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Inicio</a>
                                     </li>
                                     <li class="menu-item">
                                         <a href="#">Servicios</a>
@@ -281,8 +281,10 @@
                                                 data-bs-toggle="dropdown" aria-expanded="false">Instrumentación
                                                     Monitoreo y Calidad del Aire </a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="MedidoresDeFlujo">MEDIDORES DE FLUJO </a></li>
+                                                        <li><a class="dropdown-item" href="MedidoresDeFlujo">MEDIDORES DE FLUJO</a></li>
+                                                        <li><a class="dropdown-item" href="DetectorFugas">DETECTOR DE FUGAS</a></li>
                                                         <li><a class="dropdown-item" href="MedidoresPuntoRocio">MEDIDORES DE PUNTO DE ROCIO</a></li>
+                                                        <li><a class="dropdown-item" href="CalidadAire">CALIDAD DE AIRE</a></li>
                                                     </ul>    
                                                 
                                             </li>
@@ -331,17 +333,23 @@
 
                                         </ul>
                                     </li>
-
-                                    <li class="nav-item dropdown">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-uppercase text-light" role="button" href="/Proyectos">Proyectos</a>
+                                    </li>
+                                    <li class="dropdown dropdown-item">
                                         <a class="nav-link text-uppercase text-light" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            Proyectos
+                                            Catalogos
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="/">Blog Default</a></li>
-                                            <li><a class="dropdown-item" href="blog-single.html">Blog Single Post</a>
-                                            </li>
-
+                                           <li><a class="dropdown-item" href="/CatalogoLubricacion">LUBRICACION INDUSTRIAL</a></li>
+                                            <li><a class="dropdown-item" href="/CatalogoVacio">VACIO</a></li>
+                                            <li><a class="dropdown-item" href="/CatalogosAhorroEnergia">AHORRO DE ENERGIA CON AIRE COMPRIMIDO</a></li>
+                                            <li><a class="dropdown-item" href="/CatalogoBoquillas">BOQUILLAS ATOMIZADORAS</a></li>
+                                            <li><a class="dropdown-item" href="/CatalogoAspiradoras">ASPIRADORAS INDUSTRIALES</a></li>
+                                            <li><a class="dropdown-item" href="/CatalogoHighTech">HIGH TECH AIRE COMPRIMIDO</a></li>
+                                            <li><a class="dropdown-item" href="/CatalogoInstrumentacion">INSTRUMENTACIÓN Y CALIDAD DEL AIRE</a></li>
+                                      
                                         </ul>
                                     </li>
 
@@ -351,6 +359,8 @@
                                             Blog
                                         </a>
                                         <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="AcademiaDeVacio">Academia de Vacío</a></li>
+                                            <li><a class="dropdown-item" href="SistemasDeVacio">Diseño de Sistemas de Vacío</a></li>
                                             <li><a class="dropdown-item"  href="BlogAirJet">Air Jet</a></li>
                                             <li><a class="dropdown-item"  href="varistat">Varistat</a></li>
                                             <li><a class="dropdown-item"  href="BlogOptimizacionAire">Optimizacion De Aire Comprimido</a></li>
@@ -365,7 +375,7 @@
                 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 
                     <div class="link_btn float_right">
-                        <a href="contact.html" class="thm-btn bg-clr1">CONTÁCTANOS</a>
+                        <a href="#Contactenos" class="thm-btn bg-clr1">CONTÁCTANOS</a>
                     </div>
                 </div>
             </div>
@@ -723,18 +733,18 @@
     @media only screen and (max-width: 991px) {}
 
 
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
+    @media only screen and (min-width: 768px)  {
         .header-area .logo {
             text-align: center;
             margin: 0 0 30px;
         }
-
         .header-contact-info {
             overflow: hidden;
-            width: 400px;
+            width: 100%;
             margin: 0 auto;
             margin-bottom: 20px;
         }
+        
 
         .top-social-links {
             float: none;
@@ -742,10 +752,10 @@
             text-align: center;
         }
         .mobile{
-            display: block;
+            display: none;
         }
         .desktop{
-            display: none;
+            display: block;
         }
     }
 
@@ -767,9 +777,10 @@
             left: -20px;
         }
 
+      
         .header-contact-info {
             overflow: hidden;
-            width: 100%;
+            width: 400px;
             margin: 0 auto;
             margin-bottom: 20px;
         }
