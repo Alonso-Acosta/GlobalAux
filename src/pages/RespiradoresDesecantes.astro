@@ -22,8 +22,8 @@ import Layout from '../layouts/Layout.astro';
 			<div class="section-title">
 				<h2>Tipos de Respiradores Desecantes</h2>
 			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
 					<button type="button" class="btn btn-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalElectroquimico">
 						<div class="default-blog-news wow fadeInUp animated animated"
 							style="visibility: visible; animation-name: fadeInUp;">
@@ -32,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
 								<figcaption class="overlay">
 									<div class="box">
 										<div class="content">
-											<i class="fa fa-link" aria-hidden="true"></i>
+											<i class="bi bi-arrows-angle-expand"></i>
 										</div>
 									</div>
 								</figcaption>
@@ -45,7 +45,7 @@ import Layout from '../layouts/Layout.astro';
 						</div>
 					</button>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
 					<button type="button" class="btn btn-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalResorte">
 						<div class="default-blog-news wow fadeInUp animated animated"
 							style="visibility: visible; animation-name: fadeInUp;">
@@ -54,7 +54,7 @@ import Layout from '../layouts/Layout.astro';
 								<figcaption class="overlay">
 									<div class="box">
 										<div class="content">
-											<i class="fa fa-link" aria-hidden="true"></i>
+											<i class="bi bi-arrows-angle-expand"></i>
 										</div>
 									</div>
 								</figcaption>
@@ -109,7 +109,7 @@ import Layout from '../layouts/Layout.astro';
 							</ul>
 						</div>
 						<div class="row d-flex justify-content-center align-items-center">
-						  <div class="col-lg-2 col-md-12">
+						  <div class="col-lg-2 col-6">
 							<img  src="images/Productos/LubricacionIndustrial/respirador1.webp"  alt="">
 						  </div>
 						  <div class="col-lg-10 col-md-12 table-responsive">
@@ -194,7 +194,7 @@ import Layout from '../layouts/Layout.astro';
 					La cubierta está construida en Tritan, un material patentado que es altamente resistente para impactos y químicos a una amplia gama de temperaturas operativas. Estas características únicas equiparan a una vida más larga para tu respirador y tu equipo.
                 </p>
                 <div class="row d-flex justify-content-center align-items-center">
-                  <div class="col-lg-2 col-md-12">
+                  <div class="col-lg-2 col-6">
                     <img class="mt-5" src="images/Productos/LubricacionIndustrial/respirador2.webp" alt="">
                   </div>
                   <div class="col-lg-10 col-md-12 table-responsive">
@@ -291,7 +291,7 @@ import Layout from '../layouts/Layout.astro';
 					Los respiradores TRAP quita la humedad del aire entrante en forma de vapor y lo libera de vuelta hacía la atmósfera en el ciclo de salida. El filtro regenera continuamente su capacidad de sostener agua. Los respiradores TRAP expulsa la humedad al exterior, eliminando la necesidad de cambiar el respirador debido a saturación del agua.					
 				</p>
 				<div class="row d-flex justify-content-center align-items-center">
-					<div class="col-lg-2 col-md-12">
+					<div class="col-lg-2 col-6">
 						<img src="images/Productos/LubricacionIndustrial/respirador3.webp"
 							alt="">
 					</div>
@@ -439,7 +439,6 @@ import Layout from '../layouts/Layout.astro';
 </div>
 
 </Layout>
-
 <style>
 	table{
 		font-size: 1rem;
@@ -734,17 +733,6 @@ import Layout from '../layouts/Layout.astro';
 	.blog-single-area .add-comment-box form button:hover {}
 
 
-
-
-
-
-
-
-
-
-
-
-
 	/* Cards */
 	.blog-section2 {
 	}
@@ -807,7 +795,6 @@ import Layout from '../layouts/Layout.astro';
 	.default-blog-news .lower-content h4 {
 		color: #303030;
 		font-weight: 400;
-		margin-bottom: 10px;
 		line-height: 26px;
 	}
 
@@ -856,6 +843,9 @@ import Layout from '../layouts/Layout.astro';
 		transform: scale(1);
 		transition: all 0.5s ease 0s;
 		height: 100%;
+		width: 100%;
+		min-width: 100%;;
+		object-fit: contain;
 	}
 
 	.default-blog-news:hover .img-holder img {
@@ -1033,7 +1023,5 @@ import Layout from '../layouts/Layout.astro';
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);    
 }
-
-
 
 </style>
