@@ -192,11 +192,11 @@ import Layout from '../layouts/Layout.astro';
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<div class="row align-items-center">
-					<div class="col-3">
+				<div class="row d-flex justify-content-center align-items-center">
+					<div class="col-lg-3 col-9">
 						<img src="images/Productos/Aspiradoras/AspiradoraLiquidos2.jpg" alt="Aspiradora Liquidos 2">
 					</div>
-					<div class="col-9">
+					<div class="col-lg-9 col-12">
 						<p>
 							El Sistema para Aspiración de Líquidos, Reversible Drum Vac y High Reversible Vac Drum , funciona con Aire Comprimido y puede ser fácilmente conectado a cualquier tambor estándar de 110, 205 o 410 litros. Su alto poder de aspiración posibilita la carga y descarga de un tambor de 205 litros en menos de dos minutos con el solo giro de una perilla. Este sistema permite aspirar derrames, así como emplearse para la transferencia de líquidos con contaminantes hacia tanques de filtrado en minutos. Tanto la velocidad de llenado como de descarga, pueden ser controladas por medio de una perilla, haciendo del Reversible Drum Vac una aspiradora industrial ideal para manipular líquidos.
 						</p>
@@ -237,11 +237,11 @@ import Layout from '../layouts/Layout.astro';
 		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<div class="row align-items-center">
-				<div class="col-3">
+			<div class="row d-flex justify-content-center align-items-center">
+				<div class="col-lg-3 col-9">
 					<img src="images/Productos/Aspiradoras/AspiradoraVirutas2.jpg" alt="Aspiradora Liquidos 2">
 				</div>
-				<div class="col-9">
+				<div class="col-lg-9 col-12">
 					<p>
 						El Sistema para Aspiración que filtra Virutas de Líquidos refrigerantes y Aceites de Corte Chip Trapper y High Lift Chip Trapper ofrece una solución eficiente, rápida y sencilla para separar virutas de los líquidos refrigerantes y otros líquidos. Su funcionamiento consiste en aspirar el producto lleno de contaminantes captando los desperdicios y enviándolos hacia un filtro reutilizable. Este los retiene, filtrando los líquidos hacia el tambor.
 						<br>
@@ -290,11 +290,11 @@ import Layout from '../layouts/Layout.astro';
 		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<div class="row align-items-center">
-				<div class="col-3">
+			<div class="row d-flex justify-content-center align-items-center">
+				<div class="col-lg-3 col-9">
 					<img src="images/Productos/Aspiradoras/AspiradoraSolidos2.jpg" alt="Aspiradora Liquidos 2">
 				</div>
-				<div class="col-9">
+				<div class="col-lg-9 col-12">
 					<p>
 						El Sistema para Aspiración de Sólidos, Chip Vac, Heavy Duty Dry Vac y Heavy Duty Hepa Vac funciona con Aire Comprimido y permite aspirar rápida y eficientemente virutas secas o mojadas de metal, madera o plástico, y descargarlas directamente a un tambor. Este Sistema es ideal para aspirar virutas de pisos y superficies de trabajo de centros de mecanizado, tornos, sierras, molinos y otros equipos industriales. Diseñado para un uso ocasional con materiales que puedan generar polvo, el filtro bolsa, retiene el mismo logrando mantener el aire ambiental limpio. Adicionalmente el modelo Hepa Vac se puede utilizar en ambientes polvorientos que requieran limpieza de manera frecuente ya que cuenta con un filtro HEPA (High Efficiency Particulate Air) con un nivel de filtración de 0.3 micras. 
 						<br>
@@ -341,7 +341,6 @@ import Layout from '../layouts/Layout.astro';
 
 
 </Layout>
-
 <style>
 	table{
 		font-size: 1rem;
@@ -412,6 +411,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.blog-single-area .middle-content-box .img-holder {
+		width: 300px;
 	}
 
 	.blog-single-area .middle-content-box .img-holder,
@@ -697,8 +697,9 @@ import Layout from '../layouts/Layout.astro';
 	.default-blog-news .lower-content h4 {
 		color: #303030;
 		font-weight: 400;
-		margin-bottom: 10px;
 		line-height: 26px;
+		font-size: calc(1em + 0.3vw);
+		margin: auto;
 	}
 
 	.default-blog-news .lower-content h4 a {
@@ -745,8 +746,9 @@ import Layout from '../layouts/Layout.astro';
 	.default-blog-news .img-holder img {
 		transform: scale(1);
 		transition: all 0.5s ease 0s;
+		height: 100%;
 		width: 100%;
-		min-width: 275px;
+		min-width: 100%;;
 		object-fit: contain;
 	}
 
@@ -925,7 +927,5 @@ import Layout from '../layouts/Layout.astro';
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);    
 }
-
-
 
 </style>

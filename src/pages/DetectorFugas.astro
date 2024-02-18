@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="section-title">
 					<h2>Tipos de Detector de Fugas</h2>
 				</div>
-				<div class="row justify-content-center">
+				<div class="row d-flex justify-content-center">
 					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
 						<button type="button" class="btn text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalS531">
 							<div class="default-blog-news wow fadeInUp animated animated"
@@ -94,11 +94,11 @@ import Layout from '../layouts/Layout.astro';
 		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<div class="row align-items-center">
-				<div class="col-3">
+			<div class="row d-flex justify-content-center align-items-center">
+				<div class="col-lg-3 col-9">
 					<img src="images/Productos/Medidores/DectectorFugas3.jpg" alt="S531">
 				</div>
-				<div class="col 9">
+				<div class="col-lg-9 col-12">
 					<p>
 						Las fugas en los sistemas de aire comprimido son responsables de entre el 15% y el 20% de la pérdida de energía anual. Por lo tanto, es esencial encontrar, controlar y reparar las fugas existentes en los sistemas de aire comprimido para garantizar un consumo de aire comprimido eficiente desde el punto de vista energético.
                         <br>
@@ -146,11 +146,11 @@ import Layout from '../layouts/Layout.astro';
 		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<div class="row align-items-center">
-				<div class="col-3">
+			<div class="row d-flex justify-content-center align-items-center">
+				<div class="col-lg-3 col-9">
                     <img src="images/Productos/Medidores/DectectorFugas4.jpg" alt="S530">
 				</div>
-				<div class="col 9">
+				<div class="col-lg-9 col-12">
 					<p>
 						S530 Es un detector de fugas por ultrasonidos para aire comprimido y gases (versión Eco).
                         <br>
@@ -261,6 +261,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.blog-single-area .middle-content-box .img-holder {
+		width: 300px;
 	}
 
 	.blog-single-area .middle-content-box .img-holder,
@@ -546,7 +547,6 @@ import Layout from '../layouts/Layout.astro';
 	.default-blog-news .lower-content h4 {
 		color: #303030;
 		font-weight: 400;
-		margin-bottom: 10px;
 		line-height: 26px;
 	}
 
@@ -594,8 +594,9 @@ import Layout from '../layouts/Layout.astro';
 	.default-blog-news .img-holder img {
 		transform: scale(1);
 		transition: all 0.5s ease 0s;
+		height: 100%;
 		width: 100%;
-		min-width: 275px;
+		min-width: 100%;;
 		object-fit: contain;
 	}
 
@@ -774,7 +775,5 @@ import Layout from '../layouts/Layout.astro';
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);    
 }
-
-
 
 </style>
