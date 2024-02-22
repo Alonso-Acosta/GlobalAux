@@ -1,22 +1,25 @@
-import React from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+import Slider from "react-slick";
+import '../css/Carousel.css'
 
-const CarouselProject = () => {
+function CaraouselP() {
   const settings = {
+    className: "slider variable-width",
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 4,
+    centerMode: true,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 0,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           infinite: true,
           dots: true
         }
@@ -25,7 +28,7 @@ const CarouselProject = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           initialSlide: 2
         }
       },
@@ -36,9 +39,9 @@ const CarouselProject = () => {
           slidesToScroll: 1
         }
       }
-    ]
+    ],
+    dotsClass: 'slick-dots custom-dots'
   };
-
   const cardItems = [
     {
       img: 'images/Proyectos/proyecto26.webp',
@@ -49,7 +52,7 @@ const CarouselProject = () => {
       title: 'Mantenimientos Sistemas de Lubricación'
     },
     {
-      img: 'images/Proyectos/proyecto28.webp',
+      img: 'images/Proyectos/proyecto28C.webp',
       title: 'PETROLEUM GAS'
     },
     {
@@ -66,28 +69,28 @@ const CarouselProject = () => {
     }
   ];
 
+  
   return (
-    <Slider {...settings}>
-      {cardItems.map((item, index) => (
-        <div key={index} className="carousel-item">
-          <div className="col-md-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={item.img} className="img-fluid" alt={item.title} />
-              </div>
-              <div className="card-img-overlay">
-                <div className="content project-content text-center">
-                  <a className="text-decoration-none" href="Proyectos">
-                    <h4>{item.title}</h4>
-                  </a>
+    <div className="slider-container W-75">
+          <Slider {...settings}>
+          {cardItems.map((item, index) => (
+        <div key={index} className="carousel-item ms-4 bg-transparent">
+            <div className="card bg-transparent">
+              <a href="Proyectos">
+                <div className="card-img">
+                  <img src={item.img} className="img-fluid" alt={item.title} />
+
                 </div>
-              </div>
+              </a>
             </div>
-          </div>
+          
         </div>
       ))}
-    </Slider>
+            
+          </Slider>
+      
+    </div>
   );
-};
+}
 
-export default CarouselProject;
+export default CaraouselP;

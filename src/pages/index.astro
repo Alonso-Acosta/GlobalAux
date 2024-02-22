@@ -3,7 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Carousel from '../components/Carousel.astro';
 import Formulario from '../components/Formulario.astro';
 import CarouselClientes from '../components/CarouselClientes.astro';
-import CarouselProject from '../components/CarouselProject.jsx';
+import CarouselR from '../components/CarouselR.astro';
+import CarouselP from '../components/CarouselP.jsx';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 ---
 
 <Layout>
@@ -175,9 +178,9 @@ import CarouselProject from '../components/CarouselProject.jsx';
 			</div>
 		</div>
 	</section>
-
-	<Carousel />
-
+	<section >
+	<CarouselR />
+	</section>
 	<section class="blog-section sec-padd2">
 		<div class="container">
 			<div class="section-title">
@@ -288,7 +291,12 @@ import CarouselProject from '../components/CarouselProject.jsx';
 <style>
 
 	
-	
+.carousel-control-prev,
+.carousel-control-next {
+  
+  z-index: 0;
+ 
+}
 	.carousel-caption {
 		top: 20%;
 		font-size: 1.5vw;

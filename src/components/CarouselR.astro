@@ -1,0 +1,173 @@
+---
+import CarouselP from './CarouselP.jsx';
+---
+<section class="latest-project sec-padd breadcrumb-area" style={{ backgroundImage: `url(images/slides/LineaAire.webp)` }}>
+    <div class="container my-3">
+      <div class="row">
+        <div class="col-md-4 col-sm-5 col-xs-12">
+          <div class="section-title2">
+            <h2>Proyectos</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto my-auto justify-content-center">
+        <CarouselP client:only/>
+      </div>
+    </div>
+</section>
+<style>
+    .carousel-inner .carousel-item > div {
+    display: none;
+}
+
+/* Muestra solo un elemento del carousel en pantallas menores a 600px */
+@media (max-width: 599px) {
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+        margin: auto;
+
+    }
+}
+
+/* Muestra dos elementos del carousel en pantallas entre 600px y 749px */
+@media (min-width: 600px) and (max-width: 749px) {
+    .carousel-inner .carousel-item > div:first-child,
+    .carousel-inner .carousel-item > div:nth-child(2) {
+        display: block;
+    }
+}
+
+/* Muestra tres elementos del carousel en pantallas entre 750px y 949px */
+@media (min-width: 750px) and (max-width: 949px) {
+    .carousel-inner .carousel-item > div:first-child,
+    .carousel-inner .carousel-item > div:nth-child(2),
+    .carousel-inner .carousel-item > div:nth-child(3) {
+        display: block;
+        margin: auto;
+
+    }
+}
+
+/* Muestra cuatro elementos del carousel en pantallas mayores o iguales a 950px */
+@media (min-width: 950px) {
+    .carousel-inner .carousel-item > div {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+
+
+.project-content {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostrar el contenido al hacer hover sobre la imagen */
+
+.card{
+    height: 300px;
+    max-width: 300px;
+    background-color: transparent;
+}
+.card-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img img{
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+.card:hover .project-content {
+    opacity: 1;
+}
+.card:hover{
+    border: 4px solid #ad2727;
+    background: rgba(0, 0, 0, 0.62);
+}
+.card:hover .card-img{
+    background: rgba(0, 0, 0, 0.62);
+}
+.card-img-overlay h4{
+    color: #fff;
+}
+.card-img-overlay{
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease-in-out;
+}
+.card-img-overlay:hover{
+    background: rgba(0, 0, 0, 0.62);
+}
+.section-title2 {
+  position: relative;
+  margin-bottom: 50px;
+}
+.section-title2 h2{
+    color: #fff;
+}
+
+.section-title2:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 70px;
+    height: 1px;
+    background: #ad2727;
+}
+.section-title.center:after {
+    left: 50%;
+    margin-left: -35px;
+}
+.latest-project {background-size: cover;background-repeat: no-repeat;background-attachment: fixed;}
+
+
+
+.breadcrumb-area {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 80px;
+  position: relative;
+}
+
+.breadcrumb-area:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.62);
+    z-index: 0;
+}
+
+</style>

@@ -1,0 +1,129 @@
+<div class="containerWha">
+    <input type="checkbox" id="btn-mas">
+    <div class="redes">
+        <a href="https://web.whatsapp.com/send?phone=573102247318&text=Hola quiero consultarte algo?">
+            <div class="btn-mass">
+                <label ><i class="bi bi-whatsapp"></i></label>
+            </div>
+            <div class="info">
+                <span class="wptwa-title">Mauricio Rubio</span>
+                <span class="wptwa-name">Contacto para Aire Comprimido</span>
+            </div>
+        </a>
+        <a href="https://web.whatsapp.com/send?phone=573212902192&text=Hola quiero consultarte algo">
+            <div class="btn-mass">
+                <label ><i class="bi bi-whatsapp"></i></label>
+            </div>
+            <div class="info">
+                <span class="wptwa-title">Marcela Moncayo</span>
+                <span class="wptwa-name">Comercial Lubricación</span>
+            </div>
+        </a>
+       
+    </div>
+    <div class="btn-mas">
+        <label for="btn-mas"><i class="bi bi-whatsapp"></i></label>
+    </div>
+</div>
+<style>
+#btn-mas{
+    display: none;
+}
+.containerWha{
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+}
+ .btn-mas label{
+    display: block;
+    text-decoration: none;
+    background: #25d366;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+
+.btn-mass label{
+    display: block;
+    text-decoration: none;
+    background: #25d366;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+    font-size: 25px;
+
+}
+
+.redes a{
+    display: block;
+    text-decoration: none;
+    background: #25d366;
+    color: #fff;
+    width: 300px;
+    height: 55px;
+    text-align: center;
+    
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+
+.redes a:hover{
+    background: #fff;
+    color: #25d366;
+}
+.redes a{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+}
+.redes a span{
+    height: 26px;
+}
+.redes a image{
+    width: 55px;
+    height: 55px;
+    background: #25d366;
+    font-size: 23px;
+}
+.redes a .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;text-align: start;
+}
+.redes a .info .wptwa-title{
+    margin-top: 5px;
+    color: black;
+    opacity: .5;
+}
+.redes a .info span{
+    height: 26px;
+    
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.btn-mas label{
+    cursor: pointer;
+    background: #25d366;
+    font-size: 23px;
+}
+#btn-mas:checked ~ .btn-mas label{
+    transform: rotate(135deg);
+    font-size: 25px;
+}
+.btn-mas{
+    width: 55px;
+}
+
+</style>
